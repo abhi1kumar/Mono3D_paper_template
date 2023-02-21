@@ -1,0 +1,442 @@
+% Abhinav Kumar, MSU
+% If you want to join command ending with \xspace and another word, use \command{}word 
+
+%===============================================================================
+% Colors
+%===============================================================================
+\definecolor{my_blue}{rgb}{0.2, 0.6, 1}  % dodgerblue
+\definecolor{my_magenta}{rgb}{1.0, 0.2, 0.6} % triadic to dodgerblue
+\definecolor{my_yellow}{rgb}{1.0, 0.8, 0.2} % triadic to magenta
+\definecolor{my_green}{rgb}{0.0, 0.9, 0.24}
+\definecolor{my_green_2}{rgb}{0.0, 0.4, 0.0}
+
+\definecolor{set1_cyan}{rgb}{0.23, 0.87, 1.0}
+
+\definecolor{backward_color}{rgb}{1.0, 0.6, 0.2}
+\definecolor{forward_color}{rgb}{0.2, 1.0, 0.6}
+
+\definecolor{my_violet}{rgb}{0.79, 0.40, 1} %{0.73,0.62,0.91}  %
+% \definecolor{my_yellow}{rgb}{0.9, 0.8, 0.54}
+% \definecolor{my_yellow_2}{rgb}{1, 0.75, 0.}
+\definecolor{my_red}{rgb}{1,0,0}
+\definecolor{my_purple}{rgb}{0.27,0.8, 0.8}
+\definecolor{new_green}{rgb}{0.75,0.97,0.44}
+\definecolor{my_orange}{rgb}{1.0,0.6,0.35}
+
+\definecolor{lightgray}{rgb}{0.96, 0.96, 0.96}
+\definecolor{white}{rgb}{1.0, 1.0, 1.0}
+
+\definecolor{projectionColor}{rgb}{0.2, 0.6, 1}
+\definecolor{rayColor}{rgb}{0.0,0.0,0.0}
+\definecolor{axisColor}{rgb}{0.0, 0.0, 0.0}
+\definecolor{rayColor}{rgb}{0.0, 0.0, 0.0}
+
+\colorlet{projectionBorderShade}{rayColor!100}
+\colorlet{projectionFillShade}{projectionColor!20}
+\colorlet{rayShade}{my_yellow!100}
+\colorlet{axisShade}{axisColor!20}
+\colorlet{axisShadeDark}{axisColor!100}
+
+% Table row Colors
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+%Citation color
+\definecolor{darkGreen}{rgb}{0.01, 0.8, 0.24}%{0.31, 0.94, 0.3}%{0.09,0.88,0.00}{0.29, 0.83, 0.38}
+
+
+\colorlet{proposedShade}{darkGreen}
+\colorlet{vanillaShade}{red!90}
+
+% Scale tables by this fraction
+\newcommand{\scaleFraction}{0.8}
+% Scale qualitative figures by this fraction
+\newcommand{\figureScaleFraction}{0.9}
+\newcommand{\waymoFigureScaleFraction}{0.61}
+
+%===============================================================================
+% Custom commands
+%===============================================================================
+% Mathematical Notations
+\newcommand{\bigO}[1]{\mathcal{O}\left(#1\right)}
+\newcommand{\clip}[1]{\left\lfloor#1\right\rceil}
+\newcommand{\numberElem}[1]{\left|#1\right|}
+\newcommand{\elementMul}{\!\odot} %\circ
+\newcommand{\linfinity}{\ell_\infty}
+\newcommand{\identity}{{\bf{I}}}
+
+% Object detection stuff
+\newcommand{\twoD}{$2$D\xspace}
+\newcommand{\threeD}{$3$D\xspace}
+\newcommand{\fourD}{$4$D\xspace}
+\newcommand{\fiveD}{$5$D\xspace}
+\newcommand{\twoDMath}{2\text{D}\xspace}
+\newcommand{\threeDMath}{3\text{D}\xspace}
+\newcommand{\iou}{IoU\xspace}
+\newcommand{\iouTwoD}{\iou$_{2\text{D}}$\xspace}
+\newcommand{\iouThreeD}{\iou$_{3\text{D}}$\xspace}
+\newcommand{\lidar}{LiDAR\xspace}
+\newcommand{\radar}{radar}
+\newcommand{\Radar}{Radar}
+\newcommand{\giouTwoD}{g\iouTwoD}
+\newcommand{\giouThreeD}{g\iouThreeD}
+\newcommand{\vol}{V}
+
+% Equivariance related
+\newcommand{\equivariant} {equivariant\xspace}
+\newcommand{\Equivariant} {Equivariant\xspace}
+\newcommand{\equivariance}{equivariance\xspace}
+\newcommand{\Equivariance}{Equivariance\xspace}
+\newcommand{\scaleEquivariant} {scale \equivariant}
+\newcommand{\ScaleEquivariant} {Scale \Equivariant}
+\newcommand{\scaleEquivariance}{scale \equivariance}
+\newcommand{\ScaleEquivariance}{Scale \Equivariance}
+\newcommand{\depthEquivariant} {depth \equivariant}
+\newcommand{\DepthEquivariant} {Depth \Equivariant}
+\newcommand{\depthEquivariance} {depth \equivariance}
+\newcommand{\DepthEquivariance} {Depth \Equivariance}
+\newcommand{\projectiveEquivariant} {projective \equivariant}
+\newcommand{\ProjectiveEquivariant} {Projective \Equivariant}
+\newcommand{\projectiveEquivariance}{projective \equivariance}
+\newcommand{\ProjectiveEquivariance}{Projective \Equivariance}
+\newcommand{\MaxScale}{Scale-Projection}
+\newcommand{\ses}{SES}
+\newcommand{\se}{SE}
+\newcommand{\weight}{\mathbf{w}}
+\newcommand{\plane}{patch plane\xspace}
+\newcommand{\transformationGroup}{G}
+\newcommand{\transformationGroupMember}{g}
+\newcommand{\inputData}{h}%\mathcal{H}}
+\newcommand{\outputData}{y}%\mathcal{Y}}
+\newcommand{\mapping}{\Phi}
+\newcommand{\transformationMath}{\mathcal{T}}
+\newcommand{\transformationInput}{\transformationMath_\transformationGroupMember^\inputData}
+\newcommand{\transformationOutput}{\transformationMath_\transformationGroupMember^\outputData}
+\newcommand{\manifold}{manifold}
+
+% Projection Equivariance Stuff
+\newcommand{\equivariantFunction}{\phi}
+\newcommand{\shiftFunction}{\psi}
+\newcommand{\transformation}{transformation\xspace}
+\newcommand{\mobius}{M\"{o}bius\xspace}
+
+\newcommand{\mySign}{\!+\!}
+\newcommand{\mathDash}{$-$}
+
+\newcommand{\varX}{x}
+\newcommand{\varY}{y}
+\newcommand{\varZ}{z}
+\newcommand{\posX}{X}
+\newcommand{\posY}{Y}
+\newcommand{\posZ}{Z}
+\newcommand{\posXTwo}{X'}
+\newcommand{\posYTwo}{Y'}
+\newcommand{\posZTwo}{Z'}
+\newcommand{\norm}[1]{\left|#1\right|}
+
+\newcommand{\pointCloudOne}{H}
+\newcommand{\pointCloudTwo}{H'}
+\newcommand{\projectionOperator}{\mathbf{K}}%\mathrm{\pi}}
+
+\newcommand{\rotation}{\mathbf{R}}
+\newcommand{\translation}{\mathbf{t}}
+\newcommand{\transX}{t_\varX}
+\newcommand{\transY}{t_\varY}
+\newcommand{\transZ}{t_\varZ}
+\newcommand{\transXTwo}{\overline{t}_\varX}
+\newcommand{\transYTwo}{\overline{t}_\varY}
+\newcommand{\transZTwo}{\overline{t}_\varZ}
+
+\newcommand{\predictionX}{\Hat{x}}
+\newcommand{\predictionY}{\Hat{y}}
+\newcommand{\predictionZ}{\Hat{z}}
+
+\newcommand{\pixU}{u}
+\newcommand{\pixV}{v}
+\newcommand{\pixUTwo}{u'}
+\newcommand{\pixVTwo}{v'}
+\newcommand{\pixUSubs}{\overline{u}}
+\newcommand{\ppointU}{u_0} % principal point one
+\newcommand{\ppointV}{v_0} % principal point two
+\newcommand{\focal}{f}%{\mathfrak{f}}
+\newcommand{\focalNormalized}{\bar{\focal}}
+\newcommand{\projectionOne}{h} % We do not use g because group member is denoted by g.
+\newcommand{\projectionTwo}{h'}
+\newcommand{\projectionOneIndexed}{h_i}
+\newcommand{\pixUMinusPointU}{(\!\pixU\!-\!\ppointU\!)}
+\newcommand{\pixUTwoMinusPointU}{(\!\pixUTwo\!-\!\ppointU\!)}
+\newcommand{\pixVTwoMinusPointV}{(\!\pixVTwo\!-\!\ppointV\!)}
+\newcommand{\pixVMinusPointV}{(\!\pixV\!-\!\ppointV\!)}
+\newcommand{\pixUMinusPointUNoBrackets}{\!\pixU\!-\!\ppointU\!}
+\newcommand{\pixVMinusPointVNoBrackets}{\!\pixV\!-\!\ppointV\!}
+\newcommand{\pixUTwoMinusPointUNoBrackets}{\!\pixUTwo\!-\!\ppointU\!}
+\newcommand{\pixVTwoMinusPointVNoBrackets}{\!\pixVTwo\!-\!\ppointV\!}
+
+\newcommand{\transU}{t_u}
+\newcommand{\transV}{t_v}
+\newcommand{\predictionU}{\Hat{\pixU}}
+\newcommand{\predictionV}{\Hat{\pixV}}
+
+
+
+% Convolution
+\newcommand{\vanillaBlock}{vanilla block\xspace}
+\newcommand{\vanillaBlocks}{vanilla blocks\xspace}
+\newcommand{\vanillaConv}{vanilla convolution\xspace}
+\newcommand{\logPolar}{log-polar\xspace}
+\newcommand{\LogPolar}{Log-polar\xspace}
+\newcommand{\logpolarConv}{\logpolar~convolution\xspace}
+\newcommand{\LogpolarConv}{\Logpolar~convolution\xspace}
+
+% Backbone
+\newcommand{\dla}{DLA-34\xspace}
+\newcommand{\denseNetOneTwoOne}{DenseNet-121\xspace}
+\newcommand{\resNetEighteen}{ResNet-18\xspace}
+\newcommand{\resNetFifty}{ResNet-50\xspace}
+\newcommand{\rsuNet}{RSUNet\xspace}
+\newcommand{\pretrain}{pretrain\xspace}
+
+% NMS algorithms
+\newcommand{\classicalNmsShort}{classical\xspace}
+\newcommand{\classicalNmsShortCaps}{Classical\xspace}
+\newcommand{\classicalNms}{classical NMS\xspace}
+\newcommand{\classicalNmsCaps}{Classical NMS\xspace}
+\newcommand{\softNmsCaps}{Soft-NMS\xspace}
+\newcommand{\softNmsShortCaps}{Soft\xspace}
+\newcommand{\distanceNmsCaps}{Distance-NMS\xspace}
+\newcommand{\distanceNmsShortCaps}{Distance\xspace}
+
+% Datasets
+\newcommand{\kitti}{KITTI\xspace}
+\newcommand{\nuscenes}{nuScenes\xspace}
+\newcommand{\waymo}{Waymo\xspace}
+\newcommand{\waymoOpen}{Waymo Open\xspace}
+\newcommand{\imageNet}{ImageNet\xspace}
+\newcommand{\nyuDepth}{NYU-Depth-v2\xspace}
+\newcommand{\valOne}{Val 1\xspace}
+\newcommand{\valTwo}{Val 2\xspace}
+\newcommand{\val}{Val\xspace}
+\newcommand{\frontal}{frontal\xspace}
+\newcommand{\advWeather}{Adverse Weather\xspace}
+\newcommand{\advWeatherShort}{Adv. Weather\xspace}
+\newcommand{\ithaca}{Ithaca-365\xspace}
+\newcommand{\argoverseTwo}{Argoverse 2\xspace}
+\newcommand{\scannet}{ScanNet\xspace}
+\newcommand{\rugd}{RUGD\xspace}
+
+
+% Loss 
+\newcommand{\loss}{\mathcal{L}}
+\newcommand{\lossBefore}{\loss_{before}}
+\newcommand{\lossAfter}{\loss_{after}}
+\newcommand{\lossWeigh}{\lambda}
+\newcommand{\aploss}{\ap-Loss}
+\newcommand{\imageWise}{Imagewise}
+\newcommand{\lOne}{L_1}
+\newcommand{\lTwo}{L_2}
+\newcommand{\size}{\text{size}}
+\newcommand{\offset}{\text{offset}}
+\newcommand{\heatmap}{\text{heatmap}}
+\newcommand{\class}{{class}}
+
+% Metric
+\newcommand{\MAP}{MAP\xspace}
+\newcommand{\ap}{AP\xspace}
+\newcommand{\apMath}{\text{\ap}}
+\newcommand{\apThreeD}{\ap$_{3\text{D}}$}
+\newcommand{\apHThreeD}{APH$_{3\text{D}}$}
+\newcommand{\apThreeDForty}{\ap$_{3\text{D}|R_{40}}$}
+\newcommand{\apBevForty}{\ap$_{\text{BEV}|R_{40}}$}
+\newcommand{\apTwoD}{\ap$_{2\text{D}}$}
+\newcommand{\apTwoDForty}{\ap$_{2\text{D}|R_{40}}$}
+\newcommand{\levelOne}{Level\_1\xspace}
+\newcommand{\levelTwo}{Level\_2\xspace}
+\newcommand{\bracketPercentage}{[\%]}
+\newcommand{\imageOnly}{image-only\xspace}
+
+\newcommand{\absRel}{Abs Rel\xspace}
+\newcommand{\sqRel}{Sq Rel\xspace}
+\newcommand{\rmse}{RMSE\xspace}
+\newcommand{\rmseLog}{RMSE log\xspace}
+\newcommand{\aOne}{a_1\xspace}
+\newcommand{\aTwo}{a_2\xspace}
+\newcommand{\aThree}{a_3\xspace}
+\newcommand{\aTau}{a_\tau}
+
+% Ranking
+\newcommand{\first}[1]{$\textcolor{red}{\mathbf{#1}}$}
+\newcommand{\second}[1]{$\textcolor{blue}{\mathbf{#1}}$}
+\newcommand{\firstkey}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\secondkey}[1]{\textcolor{blue}{\textbf{#1}}}
+\newcommand{\sota}{SOTA\xspace}
+\newcommand{\best}[1]{$\mathbf{#1}$}
+\newcommand{\bestKey}[1]{\textbf{#1}}
+
+% Previous Methods
+\newcommand{\mthreeDRPN}{M3D-RPN\xspace}
+\newcommand{\kinematicImage}{Kinematic (Image)\xspace}
+\newcommand{\kinematicVideo}{Kinematic (Video)\xspace}
+\newcommand{\groomedNMS}{GrooMeD-NMS\xspace}
+\newcommand{\monoDISMulti}{MonoDIS-M\xspace}
+\newcommand{\gupNet}{GUP Net\xspace}
+\newcommand{\pseudoLidar}{Pseudo-{\lidar}\xspace}
+\newcommand{\ddThreeD}{DD3D\xspace}
+\newcommand{\ddmp}{DDMP-3D\xspace}
+\newcommand{\caddn}{CaDDN\xspace}
+\newcommand{\patchNet}{PatchNet\xspace}
+\newcommand{\detrThreeD}{DETR3D\xspace}
+\newcommand{\fcosThreeD}{FCOS3D\xspace}
+
+\newcommand{\centerFusion}{CenterFusion\xspace}
+
+% Notations
+\newcommand{\groundTruthj}{g_l}
+\newcommand{\boxes}{\mathcal{B}}
+\newcommand{\boxIndex}{i}
+\newcommand{\boxMember}{b}
+\newcommand{\boxi}{\boxMember_\boxIndex}
+\newcommand{\boxj}{\boxMember_j}
+\newcommand{\numboxes}{n}
+\newcommand{\boxesAfterNMS}{\mathcal{D}}
+\newcommand{\vindex}{\mathbf{d}}
+\newcommand{\boxesTemp}{\mathcal{T}}
+\newcommand{\boxConfidence}{b_{conf}}
+
+
+
+
+% GrooMeD-NMS
+\newcommand{\nmsThresh}{N_t}
+\newcommand{\validBoxThresh}{v}
+\newcommand{\prune}{p}
+\newcommand{\basic}{Linear\xspace}
+\newcommand{\exponentialPruning}{Exponential\xspace}
+\newcommand{\pruneof}[1]{\prune(#1)}
+\newcommand{\temperature}{\tau}
+
+\newcommand{\rescore}{{\bf r}}
+\newcommand{\score}{{\bf s}}
+\newcommand{\rescoreMember}{r_i}
+\newcommand{\scoreMember}{s_i}
+\newcommand{\tempIndex}{\mathbf{t}}
+\newcommand{\tempIndexTwo}{\mathbf{u}}
+\newcommand{\tempIndexThree}{\mathbf{v}}
+\newcommand{\tempIndexFour}{\mathbf{w}}
+\newcommand{\pruneMat}{{\bf{P}}}
+\newcommand{\overlapMat}{\mathbf{O}}
+\newcommand{\zeroVector}{\mathbf{0}}
+
+\def\lowertriangle{
+\resizebox{.015\textwidth}{!}{
+\setlength{\unitlength}{.1cm}
+\begin{picture}(7,5)(0,0)
+\put(6,0){\line(-1,0){6}}
+\put(0,0){\line(0,1){5}}
+\put(6,0){\line(-6,5){6}}
+\end{picture}
+}
+}
+\newcommand{\ourTriangle}{\triangle}
+\newcommand{\overlapMatLower}{\overlapMat_{\lowertriangle}}
+\newcommand{\overlap}{o}
+\newcommand{\mask}{{\bf{M}}}
+
+\newcommand{\groups}{\mathcal{G}}
+\newcommand{\groupIndex}{k}
+\newcommand{\groupMember}{\groups_\groupIndex}
+\newcommand{\boxesGroup}{\boxes_{\groupMember}}
+\newcommand{\boxesGroupTwo}{\boxes_{\groups_l}}
+\newcommand{\rescoreGroup}{\rescore_{\groupMember}}
+\newcommand{\scoreGroup}{\score_{\groupMember}}
+\newcommand{\pruneMatGroup}{\pruneMat_{\groupMember}}
+\newcommand{\identityGroup}{\identity_{\groupMember}}
+\newcommand{\maskGroup}{\mask_{\groupMember}}
+\newcommand{\groupSize}{\alpha}
+
+% Depth Papers
+\newcommand{\monoDepthTwo}{MonoDepth2\xspace}
+\newcommand{\depthHints}{DepthHints\xspace}
+\newcommand{\edgeDepth}{EdgeDepth\xspace}
+\newcommand{\epcDepth}{EPCDepth\xspace}
+
+% SLAM 
+\newcommand{\slam}{SLAM\xspace}
+\newcommand{\dynamicSLAM}{Dynamic \slam}
+\newcommand{\timelineMarker}{$\CIRCLE$}
+\newcommand{\selfMotion}{self-motion\xspace}
+\newcommand{\SelfMotion}{Self-motion\xspace}
+\newcommand{\SelfMotionCaps}{Self-Motion\xspace}
+\newcommand{\objectMotion}{object motion\xspace}
+\newcommand{\ObjectMotionCaps}{Object-Motion\xspace}
+\newcommand{\task}{Task\xspace}
+\newcommand{\taskAb}{T\xspace}
+\newcommand{\subTask}{subtask\xspace}
+
+% Depth Utilities
+\newcommand{\bigRes}{320\!\times\!1024}
+\newcommand{\smallRes}{192\!\times\!680}
+
+% Latin abbreviations
+\newcommand{\eg}{\textit{e.g.}\xspace}
+\newcommand{\forExample}{\textit{e.g.}\xspace}
+\newcommand{\thatIs}{\textit{i.e.}\xspace}
+\newcommand{\etcetera}{\textit{etc.}\xspace}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\etal}{\textit{et~al.}\xspace}
+
+% Table rules
+\newcommand{\myTopRule}{\Xhline{2\arrayrulewidth}}
+\newcommand{\myMidRule}{\Xhline{1.5\arrayrulewidth}}
+\newcolumntype{t}{!{\vrule width 1.5\arrayrulewidth}}
+\newcolumntype{m}{!{\vrule width 2.5\arrayrulewidth}}
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+% Cell Cyan
+\colorlet{cyan_highlight}{my_blue!85}
+\newcommand{\CCFix}{\cellcolor{cyan_highlight}}
+% Cell Green
+\colorlet{darkGreen_highlight}{darkGreen!75}
+\newcommand{\CGFix}{\cellcolor{darkGreen_highlight}}
+% \newcommand{\CGFix}{\CG{75}}
+% Cell Orange
+\colorlet{my_magenta_highlight}{my_magenta!50}
+\newcommand{\COFix}{\cellcolor{my_magenta_highlight}}
+% \newcommand{\COFix}{\CO}
+% Cell Yellow
+\colorlet{my_yellow_highlight}{my_yellow!55}
+\newcommand{\CYFix}{\cellcolor{my_yellow_highlight}}
+% \newcommand{\CYFix}{\CY}
+
+% Fancy set of arrows
+\providecommand\rightarrowRHD{\relbar\joinrel\mathrel\RHD}
+\providecommand\rightarrowrhd{\relbar\joinrel\mathrel\rhd}
+\providecommand\longrightarrowRHD{\relbar\joinrel\relbar\joinrel\mathrel\RHD}
+\providecommand\longrightarrowrhd{\relbar\joinrel\relbar\joinrel\mathrel\rhd}
+%\newcommand{\downarrowRHD}{{\rotatebox{270}{$\rightarrowRHD$}}}
+
+\newcommand{\uparrowRHD}  {\rotatebox[origin=c]{90}{$\rightarrowRHD$}}
+\newcommand{\downarrowRHD}{\rotatebox[origin=c]{270}{$\rightarrowRHD$}}
+% up and down arros for showing higher/lower the better
+\newcommand{\uparrowRHDSmall}  {\raisebox{0.05\normalbaselineskip}{\scalebox{0.7}{\uparrowRHD}}}   %$\uparrow$
+\newcommand{\downarrowRHDSmall}{\raisebox{0.07\normalbaselineskip}{\scalebox{0.7}{\downarrowRHD}}} %$\downarrow$
+
+
+% Tick and cross for present and absent
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\checkmark}%\ding{51}}%
+\newcommand{\xmark}{\ding{53}}%
+\newcommand{\autoBraces}[1]{\left(#1\right)}
+
+% Shengjie Commands
+\newcommand{\tr}{^{\!\top}}
+\newcommand{\invtr}{^{\text{-}\!\top}}
+
+% No ident heading
+\newcommand{\noIndentHeading}[1]{\noindent\textbf{#1}}
+
+% Textual Comments
+\definecolor{XLcolor}{rgb}{0.858, 0.188, 0.478}
+\newcommand{\XL}[1]{{\color{XLcolor}{\textbf{XL}: #1}  }}  % Donot use \textcolor. It breaks for line-breaks.
+\newcommand{\abhinav}{{\color{blue}{Abhinav}  }}
+\newcommand{\shengjie}{{\color{orange}{Shengjie}}}
+\newcommand{\CCtext}[1]{{\color{my_blue}{#1}}}
+\newcommand{\futureWrite}[1]{{\color{red}{WRITE: #1}  }}
