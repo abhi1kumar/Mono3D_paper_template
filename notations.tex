@@ -56,6 +56,9 @@
 %===============================================================================
 % Custom commands
 %===============================================================================
+\newcommand{\monoThreeD}{Mono3D\xspace}
+
+
 % Mathematical Notations
 \newcommand{\bigO}[1]{\mathcal{O}\left(#1\right)}
 \newcommand{\clip}[1]{\left\lfloor#1\right\rceil}
@@ -222,6 +225,9 @@
 \newcommand{\argoverseTwo}{Argoverse 2\xspace}
 \newcommand{\scannet}{ScanNet\xspace}
 \newcommand{\rugd}{RUGD\xspace}
+\newcommand{\kittiThreeSixty}{KITTI-360\xspace}
+\newcommand{\kittiThreeSixtyPanoptic}{\kittiThreeSixty PanopticBEV\xspace}
+\newcommand{\semanticKITTI}{Semantic KITTI\xspace}
 
 
 % Loss 
@@ -252,6 +258,8 @@
 \newcommand{\levelTwo}{Level\_2\xspace}
 \newcommand{\bracketPercentage}{[\%]}
 \newcommand{\imageOnly}{image-only\xspace}
+\newcommand{\apThreeDFifty}{\ap$_{\!3\text{D}\!}$ 50\xspace}
+\newcommand{\apThreeDTwentyFive}{\ap$_{\!3\text{D}\!}$ 25\xspace}
 
 \newcommand{\absRel}{Abs Rel\xspace}
 \newcommand{\sqRel}{Sq Rel\xspace}
@@ -271,7 +279,7 @@
 \newcommand{\best}[1]{$\mathbf{#1}$}
 \newcommand{\bestKey}[1]{\textbf{#1}}
 
-% Previous Methods
+% Previous Mono3D Methods
 \newcommand{\mthreeDRPN}{M3D-RPN\xspace}
 \newcommand{\kinematicImage}{Kinematic (Image)\xspace}
 \newcommand{\kinematicVideo}{Kinematic (Video)\xspace}
@@ -285,8 +293,19 @@
 \newcommand{\patchNet}{PatchNet\xspace}
 \newcommand{\detrThreeD}{DETR3D\xspace}
 \newcommand{\fcosThreeD}{FCOS3D\xspace}
+\newcommand{\deviant}{DEVIANT\xspace}
 
 \newcommand{\centerFusion}{CenterFusion\xspace}
+
+% Previous BEV Space Papers
+\newcommand{\imageToMaps}{Image2Maps\xspace}
+
+% Previous Lidar Detection Papers
+\newcommand{\boxnet}{BoxNet\xspace}
+\newcommand{\votenet}{VoteNet\xspace}
+
+% Previous Denoising Papers
+\newcommand{\mirNet}{MIRNet-v2}
 
 % Notations
 \newcommand{\groundTruthj}{g_l}
@@ -352,7 +371,7 @@
 \newcommand{\maskGroup}{\mask_{\groupMember}}
 \newcommand{\groupSize}{\alpha}
 
-% Depth Papers
+% Previous MonoDepth Papers
 \newcommand{\monoDepthTwo}{MonoDepth2\xspace}
 \newcommand{\depthHints}{DepthHints\xspace}
 \newcommand{\edgeDepth}{EdgeDepth\xspace}
