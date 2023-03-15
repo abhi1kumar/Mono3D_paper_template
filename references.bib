@@ -51,7 +51,7 @@
 }
 
 @inproceedings{manhardt2019roi,
-  title={{Roi-$10$D}: Monocular lifting of {$2$D}  detection to {$6$} pose and metric shape},
+  title={{Roi-$10$D}: Monocular lifting of {\twoD}  detection to {$6$D} pose and metric shape},
   author={Manhardt, Fabian and Kehl, Wadim and Gaidon, Adrien},
   booktitle={CVPR},
   year={2019}
@@ -198,16 +198,16 @@
   year={2021}
 }
 
-@inproceedings{zhou2021monoef,
-  title={Monocular {\threeD} Object Detection: An Extrinsic Parameter Free Approach},
+@article{zhou2021monoef,
+  title={{MonoEF}: Extrinsic Parameter Free Monocular {\threeD} Object Detection},
   author={Zhou, Yunsong and He, Yuan and Zhu, Hongzi and Wang, Cheng and Li, Hongyang and Jiang, Qinhong},
-  booktitle={CVPR},
+  journal={TPAMI},
   year={2021}
 }
 
 @article{sugirtha2021exploring,
   title={Exploring {\twoD} data augmentation for {\threeD} monocular object detection},
-  author={T, Sugirtha and M, Sridevi and Santhakumar, Khailash and Ravi Kiran, B and Gauthier, Thomas and Yogamani, Senthil},
+  author={Thayalan-Vaz, Sugirtha and M, Sridevi and Santhakumar, Khailash and Ravi Kiran, B and Gauthier, Thomas and Yogamani, Senthil},
   journal={arXiv preprint arXiv:2104.10786},
   year={2021}
 }
@@ -325,10 +325,9 @@
 @inproceedings{wang2021detr3d,
    title={{DETR3D}: {\threeD} Object Detection from Multi-view Images via {\threeD}-to-{\twoD} Queries},
    author={Wang, Yue and Guizilini, Vitor and Zhang, Tianyuan and Wang, Yilun and Zhao, Hang and Solomon, Justin},
-   booktitle={The Conference on Robot Learning ({CoRL})},
+   booktitle={CoRL},
    year={2021}
 }
-
 
 @inproceedings{wang2021progressive,
   title={Progressive Coordinate Transforms for Monocular {\threeD} Object Detection},
@@ -338,11 +337,20 @@
 }
 
 @inproceedings{chong2022monodistill,
-   title={MonoDistill: Learning Spatial Features for Monocular {\threeD} Object Detection},
+   title={{MonoDistill}: Learning Spatial Features for Monocular {\threeD} Object Detection},
    author={Zhiyu Chong and Xinzhu Ma and Hong Zhang and Yuxin Yue and Haojie Li and Zhihui Wang and Wanli Ouyang},
    booktitle={ICLR},
    year={2022}
 }
+
+@inproceedings{liu2022learning,
+  title={Learning Auxiliary Monocular Contexts Helps Monocular {\threeD} Object Detection},
+  author={Liu, Xianpeng and Xue, Nan and Wu, Tianfu},
+   booktitle={AAAI},
+  year={2022}
+}
+
+
 
 %===============================================================================
 % Pseudo-Lidar Object Detection
@@ -396,7 +404,7 @@
 % Lidar 3D Object Detection
 %===============================================================================
 @inproceedings{chen2017multi,
-  title={Multi-view 3{D} object detection network for autonomous driving},
+  title={Multi-view {\threeD} object detection network for autonomous driving},
   author={Chen, Xiaozhi and Ma, Huimin and Wan, Ji and Li, Bo and Xia, Tian},
   booktitle={CVPR},
   year={2017}
@@ -553,7 +561,7 @@
 }
 
 @article{mahler2017dex,
-  title={Dex-net 2.0: Deep learning to plan robust grasps with synthetic point clouds and analytic grasp metrics},
+  title={{Dex-Net} 2.0: Deep learning to plan robust grasps with synthetic point clouds and analytic grasp metrics},
   author={Mahler, Jeffrey and Liang, Jacky and Niyaz, Sherdil and Laskey, Michael and Doan, Richard and Liu, Xinyu and Ojea, Juan Aparicio and Goldberg, Ken},
   journal={arXiv preprint arXiv:1703.09312},
   year={2017}
@@ -752,7 +760,7 @@
 }
 
 @inproceedings{kim2020probabilistic,
-  title={Probabilistic Anchor Assignment with IoU Prediction for Object Detection},
+  title={Probabilistic Anchor Assignment with {\iou} Prediction for Object Detection},
   author={Kim, Kang and Lee, Hee},
   booktitle={ECCV},
   year={2020}
@@ -1077,6 +1085,13 @@
   year={2021}
 }
 
+@inproceedings{yu2015multi,
+  title={Multi-scale context aggregation by dilated convolutions},
+  author={Yu, Fisher and Koltun, Vladlen},
+  booktitle={ICLR},
+  year={2015}
+}
+
 
 %===============================================================================
 % Scale Equivariance Applications
@@ -1306,6 +1321,13 @@
   year={2018}
 }
 
+@inproceedings{yang2020upgrading,
+  title={Upgrading optical flow to {\threeD} scene flow through optical expansion},
+  author={Yang, Gengshan and Ramanan, Deva},
+  booktitle={CVPR},
+  year={2020}
+}
+
 
 %===============================================================================
 % Misc
@@ -1429,6 +1451,13 @@
   year    = {2015}
 }
 
+@misc{mmdet3d2020,
+	title={{MMDetection3D: OpenMMLab} next-generation platform for general {3D} object detection},
+	author={MMDetection3D Contributors},
+	howpublished = {\url{https://github.com/open-mmlab/mmdetection3d}},
+	year={2020}
+}
+
 %===============================================================================
 % Driving Datasets
 %===============================================================================
@@ -1449,7 +1478,7 @@
 @misc{kitti2012benchmark,
   title = {{The \kitti~Vision Benchmark Suite}},
   howpublished = {\url{http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d}},
-  note = {Accessed: 2020-10-11}
+  note = {Accessed: 2022-07-03}
 }
 
 @inproceedings{cordts2016cityscapes,
@@ -1526,7 +1555,9 @@
 
 @inproceedings{sun2020scalability, 
    title={Scalability in perception for autonomous driving: Waymo open dataset}, 
-   author={Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and others}, 
+   author={Sun, Pei and Kretzschmar, Henrik and Dotiwalla, Xerxes and Chouard, Aurelien and Patnaik, Vijaysai and Tsui, Paul and Guo, James and Zhou, Yin and Chai, Yuning and Caine, Benjamin and Vasudevan, Vijay and Han, Wei and Ngiam, Jiquan and Zhao, Hang and Timofeev, Aleksei and Ettinger, Scott and Krivokon, Maxim and Gao, Amy and Joshi, Aditya and Zhang, Yu
+and Shlens, Jonathon and Chen, Zhifeng and Anguelov, Dragomir
+   }, 
    booktitle={CVPR}, 
    year={2020} 
 }
@@ -1614,7 +1645,7 @@
 %===============================================================================
 @inproceedings{ros2016synthia,
   title={The synthia dataset: A large collection of synthetic images for semantic segmentation of urban scenes},
-  author={Ros, German and Sellart, Laura and Materzynska, Joanna and Vazquez, David and Lopez, Antonio},
+  author={Ros, German and Sellart, Laura and Materzynska, Joanna and Vazquez, David and Lopez, Antonio M},
   booktitle={CVPR},
   year={2016}
 }
@@ -2147,9 +2178,16 @@
   year={2020}
 }
 
+@inproceedings{lambert2020mseg,
+  title={{MSeg}: A Composite Dataset for Multi-domain Semantic Segmentation},
+  author={Lambert, John and Liu, Zhuang and Sener, Ozan and Hays, James and Koltun, Vladlen},
+  booktitle={CVPR},
+  year={2020}
+}
+
 @article{lee2019big,
   title={From big to small: Multi-scale local planar guidance for monocular depth estimation},
-  author={Lee, Jin Han and Han, Myung-Kyu and Ko, Dong Wook and Suh, Il Hong},
+  author={Lee, Jin and Han, Myung and Ko, Dong and Suh, Il},
   journal={arXiv preprint arXiv:1907.10326},
   year={2019}
 }
@@ -2192,7 +2230,7 @@
 }
 
 
-% ============== Rebuttal ================= %
+% ============== More Misc ================= %
 @inproceedings{strecke2019fusion,
   title={{EM-Fusion}: Dynamic object-level {\slam} with probabilistic data association},
   author={Strecke, Michael and Stuckler, Jorg},

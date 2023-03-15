@@ -68,6 +68,7 @@
 \newcommand{\identity}{{\bf{I}}}
 
 % Object detection stuff
+\newcommand{\oneD}{$1$D\xspace}
 \newcommand{\twoD}{$2$D\xspace}
 \newcommand{\threeD}{$3$D\xspace}
 \newcommand{\fourD}{$4$D\xspace}
@@ -178,7 +179,7 @@
 \newcommand{\transV}{t_v}
 \newcommand{\predictionU}{\Hat{\pixU}}
 \newcommand{\predictionV}{\Hat{\pixV}}
-
+\newcommand{\scaleNotation}{s}
 
 
 % Convolution
@@ -192,6 +193,9 @@
 
 % Backbone
 \newcommand{\dla}{DLA-34\xspace}
+\newcommand{\dlaThirtyFour}{DLA-34\xspace}
+\newcommand{\dlaOneZeroTwo}{DLA-102\xspace}
+\newcommand{\dlaOneSixNine}{DLA-169\xspace}
 \newcommand{\denseNetOneTwoOne}{DenseNet-121\xspace}
 \newcommand{\resNetEighteen}{ResNet-18\xspace}
 \newcommand{\resNetFifty}{ResNet-50\xspace}
@@ -218,6 +222,7 @@
 \newcommand{\valOne}{Val 1\xspace}
 \newcommand{\valTwo}{Val 2\xspace}
 \newcommand{\val}{Val\xspace}
+\newcommand{\valSmall}{val}
 \newcommand{\frontal}{frontal\xspace}
 \newcommand{\advWeather}{Adverse Weather\xspace}
 \newcommand{\advWeatherShort}{Adv. Weather\xspace}
@@ -254,6 +259,13 @@
 \newcommand{\apBevForty}{\ap$_{\text{BEV}|R_{40}}$}
 \newcommand{\apTwoD}{\ap$_{2\text{D}}$}
 \newcommand{\apTwoDForty}{\ap$_{2\text{D}|R_{40}}$}
+\newcommand{\mate}{mATE\xspace}
+\newcommand{\mase}{mASE\xspace}
+\newcommand{\maoe}{mAOE\xspace}
+\newcommand{\mave}{mAVE\xspace}
+\newcommand{\maae}{mAAE\xspace}
+\newcommand{\nds}{NDS\xspace}
+
 \newcommand{\levelOne}{Level\_1\xspace}
 \newcommand{\levelTwo}{Level\_2\xspace}
 \newcommand{\bracketPercentage}{[\%]}
@@ -273,8 +285,8 @@
 % Ranking
 \newcommand{\first}[1]{$\textcolor{red}{\mathbf{#1}}$}
 \newcommand{\second}[1]{$\textcolor{blue}{\mathbf{#1}}$}
-\newcommand{\firstkey}[1]{\textcolor{red}{\textbf{#1}}}
-\newcommand{\secondkey}[1]{\textcolor{blue}{\textbf{#1}}}
+\newcommand{\firstKey}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\secondKey}[1]{\textcolor{blue}{\textbf{#1}}}
 \newcommand{\sota}{SOTA\xspace}
 \newcommand{\best}[1]{$\mathbf{#1}$}
 \newcommand{\bestKey}[1]{\textbf{#1}}
@@ -295,7 +307,14 @@
 \newcommand{\fcosThreeD}{FCOS3D\xspace}
 \newcommand{\deviant}{DEVIANT\xspace}
 
+% Previous Radar Image Detection Papers
 \newcommand{\centerFusion}{CenterFusion\xspace}
+\newcommand{\grifNet}{GRIF Net\xspace}
+\newcommand{\contFusion}{Cont Fusion\xspace}
+\newcommand{\simpleBEV}{Simple-BEV\xspace}
+\newcommand{\craft}{CRAFT\xspace}
+\newcommand{\cramNet}{CramNet\xspace}
+\newcommand{\radiant}{RADIANT\xspace}
 
 % Previous BEV Space Papers
 \newcommand{\imageToMaps}{Image2Maps\xspace}
@@ -320,8 +339,27 @@
 \newcommand{\boxesTemp}{\mathcal{T}}
 \newcommand{\boxConfidence}{b_{conf}}
 
+\newcommand{\frontView}{C}
+\newcommand{\birdView}{B}
+\newcommand{\imageModality}{I}
+\newcommand{\radarModality}{R}
+\newcommand{\cameraPixelFront}    {u^{\frontView}_\imageModality, v^{\frontView}_\imageModality}
 
+\newcommand{\cameraPixelBirdQuantU}{u^{\birdView}_\imageModality}
+\newcommand{\cameraPixelBirdQuantV}{v^{\birdView}_\imageModality}
+\newcommand{\cameraPixelBirdQuant }{\cameraPixelBirdQuantU, \cameraPixelBirdQuantV}
 
+\newcommand{\cameraPixelBirdU}     {\bar{u}^{\birdView}_\imageModality}
+\newcommand{\cameraPixelBirdV}     {\bar{v}^{\birdView}_\imageModality}
+\newcommand{\cameraPixelBird }     {\cameraPixelBirdU, \cameraPixelBirdV}
+
+\newcommand{\cameraOffsetBirdU}{\Delta u^{\birdView}_\imageModality}
+\newcommand{\cameraOffsetBirdV}{\Delta v^{\birdView}_\imageModality}
+\newcommand{\cameraOffsetBird}{\cameraOffsetBirdU, \cameraOffsetBirdV}
+
+\newcommand{\cameraCenterFront}   {x^{\frontView}_\imageModality, y^{\frontView}_\imageModality, z^{\frontView}_\imageModality}
+\newcommand{\cameraCenterBird}    {x^{\birdView}_\imageModality, y^{\birdView}_\imageModality, z^{\birdView}_\imageModality}
+\newcommand{\transformFrontBEV}   {\bm{T}^\birdView_\frontView}
 
 % GrooMeD-NMS
 \newcommand{\nmsThresh}{N_t}
@@ -445,11 +483,14 @@
 \newcommand{\xmark}{\ding{53}}%
 \newcommand{\autoBraces}[1]{\left(#1\right)}
 
+\newcommand{\filledCircle}{\tikz\draw[black,fill=black] (0,0) circle (.7ex);}
+\newcommand{\semiCircle}{\tikz\fill[black] (90:.7ex) -- (-90:.7ex) arc (-90:90:.7ex) -- cycle;}
+
 % Shengjie Commands
 \newcommand{\tr}{^{\!\top}}
 \newcommand{\invtr}{^{\text{-}\!\top}}
 
-% No ident heading
+% No indent heading
 \newcommand{\noIndentHeading}[1]{\noindent\textbf{#1}}
 
 % Textual Comments
