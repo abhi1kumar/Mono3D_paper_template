@@ -1,5 +1,5 @@
-% Abhinav Kumar, MSU
-% If you want to join command ending with \xspace and another word, use \command{}word 
+% Abhinav Kumar, MSU, 2020
+% Use \command{}word for joining \xspace ending command and another word
 
 %===============================================================================
 % Colors
@@ -11,6 +11,7 @@
 \definecolor{my_green_2}{rgb}{0.0, 0.4, 0.0}
 
 \definecolor{set1_cyan}{rgb}{0.23, 0.87, 1.0}
+\definecolor{building}{rgb}{0.2, 0.33, 0.33}
 
 \definecolor{backward_color}{rgb}{1.0, 0.6, 0.2}
 \definecolor{forward_color}{rgb}{0.2, 1.0, 0.6}
@@ -39,16 +40,24 @@
 
 % Table row Colors
 \definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{gain}{HTML}{34a853}
+\definecolor{lost}{HTML}{ea4335}
 
 %Citation color
 \definecolor{darkGreen}{rgb}{0.01, 0.8, 0.24}%{0.31, 0.94, 0.3}%{0.09,0.88,0.00}{0.29, 0.83, 0.38}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\definecolor{lightgreen}{HTML}{90EE90}
+\definecolor{Gray}{gray}{0.95}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
 
+\newcommand{\green}[1]{\scriptsize\textcolor{ForestGreen}{#1}}
+%\newcommand{\red}[1]{\scriptsize\textcolor{red}{#1}}
 
 \colorlet{proposedShade}{darkGreen}
 \colorlet{vanillaShade}{red!90}
 
 % Scale tables by this fraction
-\newcommand{\scaleFraction}{0.8}
+\newcommand{\scaleFraction}{0.9}
 % Scale qualitative figures by this fraction
 \newcommand{\figureScaleFraction}{0.9}
 \newcommand{\waymoFigureScaleFraction}{0.61}
@@ -73,17 +82,20 @@
 \newcommand{\threeD}{$3$D\xspace}
 \newcommand{\fourD}{$4$D\xspace}
 \newcommand{\fiveD}{$5$D\xspace}
+\newcommand{\sixD}{$6$D\xspace}
 \newcommand{\twoDMath}{2\text{D}\xspace}
 \newcommand{\threeDMath}{3\text{D}\xspace}
 \newcommand{\iou}{IoU\xspace}
-\newcommand{\iouTwoD}{\iou$_{2\text{D}}$\xspace}
-\newcommand{\iouThreeD}{\iou$_{3\text{D}}$\xspace}
+\newcommand{\iouTwoD}{IoU$_{2\text{D}}$\xspace}
+\newcommand{\iouThreeD}{IoU$_{3\text{D}}$\xspace}
+\newcommand{\iouThreeDMath}{\text{\iou}_{3\text{D}}\xspace}
 \newcommand{\lidar}{LiDAR\xspace}
-\newcommand{\radar}{radar}
-\newcommand{\Radar}{Radar}
+\newcommand{\radar}{radar\xspace}
+\newcommand{\Radar}{Radar\xspace}
 \newcommand{\giouTwoD}{g\iouTwoD}
 \newcommand{\giouThreeD}{g\iouThreeD}
 \newcommand{\vol}{V}
+\newcommand{\bev}{BEV\xspace}
 
 % Equivariance related
 \newcommand{\equivariant} {equivariant\xspace}
@@ -126,16 +138,16 @@
 \newcommand{\mySign}{\!+\!}
 \newcommand{\mathDash}{$-$}
 
-\newcommand{\varX}{x}
-\newcommand{\varY}{y}
-\newcommand{\varZ}{z}
-\newcommand{\posX}{X}
-\newcommand{\posY}{Y}
-\newcommand{\posZ}{Z}
+\newcommand{\varX}{X}
+\newcommand{\varY}{Y}
+\newcommand{\varZ}{Z}
+\newcommand{\posX}{x}
+\newcommand{\posY}{y}
+\newcommand{\posZ}{z}
 \newcommand{\posXTwo}{X'}
 \newcommand{\posYTwo}{Y'}
 \newcommand{\posZTwo}{Z'}
-\newcommand{\norm}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}%\left|\!\left|#1\right|\!\right|}
 
 \newcommand{\pointCloudOne}{H}
 \newcommand{\pointCloudTwo}{H'}
@@ -242,29 +254,38 @@
 \newcommand{\lossWeigh}{\lambda}
 \newcommand{\aploss}{\ap-Loss}
 \newcommand{\imageWise}{Imagewise}
-\newcommand{\lOne}{L_1}
-\newcommand{\lTwo}{L_2}
+\newcommand{\lOne}{\loss_1}
+\newcommand{\lTwo}{\loss_2}
+\newcommand{\smoothLOne}{\text{Smooth}~\lOne}
+\newcommand{\lIoU}{\loss_{iou}}
+\newcommand{\lDice}{\loss_{dice}}
+\newcommand{\dice}{dice\xspace}
+\newcommand{\Dice}{Dice\xspace}
+\newcommand{\lSmooth}{\loss_{smooth}}
 \newcommand{\size}{\text{size}}
 \newcommand{\offset}{\text{offset}}
 \newcommand{\heatmap}{\text{heatmap}}
 \newcommand{\class}{{class}}
 
 % Metric
-\newcommand{\MAP}{MAP\xspace}
+\newcommand{\MAP}{mAP\xspace}
+\newcommand{\MAPLarge}{AP$_{Lrg}$\xspace}
+\newcommand{\MAPCar}{AP$_{Car}$\xspace}
+\newcommand{\MAPSmall}{AP$_{Sml}$\xspace}
 \newcommand{\ap}{AP\xspace}
 \newcommand{\apMath}{\text{\ap}}
-\newcommand{\apThreeD}{\ap$_{3\text{D}}$}
-\newcommand{\apHThreeD}{APH$_{3\text{D}}$}
-\newcommand{\apThreeDForty}{\ap$_{3\text{D}|R_{40}}$}
-\newcommand{\apBevForty}{\ap$_{\text{BEV}|R_{40}}$}
-\newcommand{\apTwoD}{\ap$_{2\text{D}}$}
-\newcommand{\apTwoDForty}{\ap$_{2\text{D}|R_{40}}$}
+\newcommand{\apThreeD}{$\apMath_{3\text{D}}$\xspace}
+\newcommand{\apHThreeD}{APH$_{3\text{D}}$\xspace}
+\newcommand{\apThreeDForty}{\ap$_{3\text{D}|R_{40}}$\xspace}
+\newcommand{\apBevForty}{\ap$_{\text{BEV}|R_{40}}$\xspace}
+\newcommand{\apTwoD}{\ap$_{2\text{D}}$\xspace}
+\newcommand{\apTwoDForty}{\ap$_{2\text{D}|R_{40}}$\xspace}
 \newcommand{\mate}{mATE\xspace}
 \newcommand{\mase}{mASE\xspace}
 \newcommand{\maoe}{mAOE\xspace}
 \newcommand{\mave}{mAVE\xspace}
 \newcommand{\maae}{mAAE\xspace}
-\newcommand{\nds}{NDS\xspace}
+\newcommand{\NDS}{NDS\xspace}
 
 \newcommand{\levelOne}{Level\_1\xspace}
 \newcommand{\levelTwo}{Level\_2\xspace}
@@ -282,14 +303,24 @@
 \newcommand{\aThree}{a_3\xspace}
 \newcommand{\aTau}{a_\tau}
 
+\newcommand{\meanFor}{M$_\text{For}$}
+\newcommand{\meanEleven}{M$_\text{All}$}
+
 % Ranking
-\newcommand{\first}[1]{$\textcolor{red}{\mathbf{#1}}$}
-\newcommand{\second}[1]{$\textcolor{blue}{\mathbf{#1}}$}
-\newcommand{\firstKey}[1]{\textcolor{red}{\textbf{#1}}}
-\newcommand{\secondKey}[1]{\textcolor{blue}{\textbf{#1}}}
+\newcommand{\first}[1]{$\textcolor{my_blue}{\mathbf{#1}}$}
+\newcommand{\second}[1]{$\textcolor{my_magenta}{\mathbf{#1}}$}
+\newcommand{\firstKey}[1]{\textcolor{my_blue}{\textbf{#1}}}
+\newcommand{\secondKey}[1]{\textcolor{my_magenta}{\textbf{#1}}}
 \newcommand{\sota}{SOTA\xspace}
 \newcommand{\best}[1]{$\mathbf{#1}$}
 \newcommand{\bestKey}[1]{\textbf{#1}}
+\newcommand{\gain}[1]{\textcolor{gain}{#1}}
+\newcommand{\lost}[1]{\textcolor{lost}{#1}}
+\newcommand{\good}[2]{{$#1$} {({\gain{\textbf{+}$\mathbf{#2}$}})}}
+\newcommand{\bad}[2]{{$#1$} {({\lost{--$#2$}})}}
+\newcommand{\released}{$\!^*$}
+\newcommand{\retrained}{$\!^\dagger$}
+\newcommand{\reimplemented}{$\!^\mathsection$}
 
 % Previous Mono3D Methods
 \newcommand{\mthreeDRPN}{M3D-RPN\xspace}
@@ -298,6 +329,7 @@
 \newcommand{\groomedNMS}{GrooMeD-NMS\xspace}
 \newcommand{\monoDISMulti}{MonoDIS-M\xspace}
 \newcommand{\gupNet}{GUP Net\xspace}
+\newcommand{\deviant}{DEVIANT\xspace}
 \newcommand{\pseudoLidar}{Pseudo-{\lidar}\xspace}
 \newcommand{\ddThreeD}{DD3D\xspace}
 \newcommand{\ddmp}{DDMP-3D\xspace}
@@ -305,7 +337,34 @@
 \newcommand{\patchNet}{PatchNet\xspace}
 \newcommand{\detrThreeD}{DETR3D\xspace}
 \newcommand{\fcosThreeD}{FCOS3D\xspace}
-\newcommand{\deviant}{DEVIANT\xspace}
+\newcommand{\pgd}{PGD\xspace}
+\newcommand{\petr}{PETR\xspace}
+\newcommand{\petrVTwo}{PETRv2\xspace}
+\newcommand{\bevFormer}{BEVFormer\xspace}
+\newcommand{\polarFormer}{PolarFormer\xspace}
+\newcommand{\bevDepth}{BEVDepth\xspace}
+\newcommand{\bevDetFourD}{BEVDet4D\xspace}
+\newcommand{\bevStereo}{BEVStereo\xspace}
+\newcommand{\beVerse}{BEVerse\xspace}
+\newcommand{\beVerseTiny}{BEVerse-T\xspace}
+\newcommand{\beVerseSmall}{BEVerse-S\xspace}
+\newcommand{\orBoxNet}{Box Net\xspace}
+\newcommand{\threeDPPE}{3DPPE\xspace}
+\newcommand{\hop}{HoP\xspace}
+\newcommand{\saBEV}{SA-BEV\xspace}
+\newcommand{\bevDetFourDHoP}{BEVDet4D+HoP\xspace}
+\newcommand{\streamPETR}{StreamPETR\xspace}
+\newcommand{\beVerseTinyWithMethod}{BEVerse-T+SeaBird\xspace}
+\newcommand{\beVerseSmallWithMethod}{BEVerse-S+SeaBird\xspace}
+\newcommand{\bevDetFourDHoPWithMethod}{BEVDet4D+HoP+SeaBird\xspace}
+
+
+% Previous BEV Segmentation Papers
+\newcommand{\imageToMaps}{Image2Maps\xspace}
+\newcommand{\imageToMapsWithMethod}{Image2Maps+SeaBird\xspace}
+\newcommand{\panopticBEV}{PanopticBEV\xspace}
+\newcommand{\panopticBEVWithMethod}{PanopticBEV+SeaBird\xspace}
+
 
 % Previous Radar Image Detection Papers
 \newcommand{\centerFusion}{CenterFusion\xspace}
@@ -316,12 +375,10 @@
 \newcommand{\cramNet}{CramNet\xspace}
 \newcommand{\radiant}{RADIANT\xspace}
 
-% Previous BEV Space Papers
-\newcommand{\imageToMaps}{Image2Maps\xspace}
 
 % Previous Lidar Detection Papers
-\newcommand{\boxnet}{BoxNet\xspace}
-\newcommand{\votenet}{VoteNet\xspace}
+\newcommand{\boxNet}{L-BoxNet\xspace}
+\newcommand{\voteNet}{L-VoteNet\xspace}
 
 % Previous Denoising Papers
 \newcommand{\mirNet}{MIRNet-v2}
@@ -360,6 +417,70 @@
 \newcommand{\cameraCenterFront}   {x^{\frontView}_\imageModality, y^{\frontView}_\imageModality, z^{\frontView}_\imageModality}
 \newcommand{\cameraCenterBird}    {x^{\birdView}_\imageModality, y^{\birdView}_\imageModality, z^{\birdView}_\imageModality}
 \newcommand{\transformFrontBEV}   {\bm{T}^\birdView_\frontView}
+
+% Loss Convergence Theory
+\newcommand{\risk}{\mathcal{R}}
+\newcommand{\riskLOne}{\mathcal{R}_{1}}
+\newcommand{\riskCross}{\mathcal{R}_{{\text{Cls}}}}
+\newcommand{\constOne}{a}
+\newcommand{\constTwo}{b}
+\newcommand{\uniform}{\mathcal{U}}
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\depthPred}{\hat{\posZ}}
+\newcommand{\depthPredReg}{{~}^r\depthPred}
+\newcommand{\depthPredDice}{{~}^d\depthPred}
+\newcommand{\intenGT}{h}
+\newcommand{\depthGT}{\posZ}
+\newcommand{\depthMax}{k}%\depthGT_{m}}
+\newcommand{\depthMaxHalf}{\frac{\depthMax}{2}}
+\newcommand{\widthMax}{w_{m}}
+\newcommand{\expZ}{e^{-\depthGT}}
+\newcommand{\expH}{e^{-\intenGT}}
+\newcommand{\normalMean}{\mu}
+\newcommand{\normalSig}{\sigma}
+\newcommand{\normalSigTh}{\sigma_{m}}
+\newcommand{\normalSigCr}{\sigma_{c}}
+\newcommand{\normalVar}{\sigma^2}
+\newcommand{\normalCDF}{\Phi}
+\newcommand{\normalErf}{\text{Erf}}
+\newcommand{\normalErfInv}{\text{Erf}^{-1}}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\var}{\text{Var}}
+\newcommand{\step}{s}
+\newcommand{\stepSum}{{c_1}}
+\newcommand{\stepConstant}{{c_1}}
+\newcommand{\stepSumTrue}{\mathcal{S}}
+\newcommand{\image}{\mathbf{h}}
+\newcommand{\noise}{\eta}
+\newcommand{\funcNoise}{\epsilon}
+\newcommand{\layerWeight}{\mathbf{w}}
+\newcommand{\layerWeightOptimal}{\mathbf{w_*}}
+\newcommand{\instant}{t}
+\newcommand{\instantTwo}{j}
+\newcommand{\layerWeightZero}{\layerWeight_{0}}
+\newcommand{\layerWeightMean}{{}^\loss\bm{\mu}}
+\newcommand{\layerWeightConvVanilla}{\layerWeight_\infty}
+\newcommand{\layerWeightTimeVanilla}{\layerWeight_{\instant}}
+\newcommand{\layerWeightConv}{{}^\loss\layerWeightConvVanilla}
+\newcommand{\layerWeightTime}{{}^\loss\layerWeightTimeVanilla}
+\newcommand{\gradient}{\mathbf{g}}
+\newcommand{\gradTimeVanilla}{\gradient_\instant}
+\newcommand{\gradTime}{{}^\loss\gradTimeVanilla}
+\newcommand{\gradTimeTwo}{{}^\loss\gradient_\instantTwo}
+\newcommand{\uselessConstant}{{c_2}}
+\newcommand{\length}{\ell}
+
+\newcommand{\layerWeightTimeReg}{{}^r\layerWeightTimeVanilla}
+\newcommand{\layerWeightTimeDice}{{}^d\layerWeightTimeVanilla}
+\newcommand{\layerWeightConvLOne}{{}^1\layerWeightConvVanilla}
+\newcommand{\layerWeightConvLTwo}{{}^2\layerWeightConvVanilla}
+\newcommand{\layerWeightConvReg}{{}^r\layerWeightConvVanilla}
+\newcommand{\layerWeightConvDice}{{}^d\layerWeightConvVanilla}
+\newcommand{\gradTimeMan}{{}^1\gradTimeVanilla}
+\newcommand{\gradTimeEuc}{{}^2\gradTimeVanilla}
+\newcommand{\gradTimeDice}{{}^d\gradTimeVanilla}
+
+\newcommand{\bigNumber}{M}
 
 % GrooMeD-NMS
 \newcommand{\nmsThresh}{N_t}
@@ -433,12 +554,12 @@
 \newcommand{\smallRes}{192\!\times\!680}
 
 % Latin abbreviations
-\newcommand{\eg}{\textit{e.g.}\xspace}
+%\newcommand{\eg}{\textit{e.g.}\xspace}
 \newcommand{\forExample}{\textit{e.g.}\xspace}
 \newcommand{\thatIs}{\textit{i.e.}\xspace}
 \newcommand{\etcetera}{\textit{etc.}\xspace}
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
-\newcommand{\etal}{\textit{et~al.}\xspace}
+%\newcommand{\etal}{\textit{et~al.}\xspace}
 
 % Table rules
 \newcommand{\myTopRule}{\Xhline{2\arrayrulewidth}}
@@ -453,22 +574,18 @@
 % Cell Green
 \colorlet{darkGreen_highlight}{darkGreen!75}
 \newcommand{\CGFix}{\cellcolor{darkGreen_highlight}}
-% \newcommand{\CGFix}{\CG{75}}
 % Cell Orange
 \colorlet{my_magenta_highlight}{my_magenta!50}
 \newcommand{\COFix}{\cellcolor{my_magenta_highlight}}
-% \newcommand{\COFix}{\CO}
 % Cell Yellow
 \colorlet{my_yellow_highlight}{my_yellow!55}
 \newcommand{\CYFix}{\cellcolor{my_yellow_highlight}}
-% \newcommand{\CYFix}{\CY}
 
 % Fancy set of arrows
 \providecommand\rightarrowRHD{\relbar\joinrel\mathrel\RHD}
 \providecommand\rightarrowrhd{\relbar\joinrel\mathrel\rhd}
 \providecommand\longrightarrowRHD{\relbar\joinrel\relbar\joinrel\mathrel\RHD}
 \providecommand\longrightarrowrhd{\relbar\joinrel\relbar\joinrel\mathrel\rhd}
-%\newcommand{\downarrowRHD}{{\rotatebox{270}{$\rightarrowRHD$}}}
 
 \newcommand{\uparrowRHD}  {\rotatebox[origin=c]{90}{$\rightarrowRHD$}}
 \newcommand{\downarrowRHD}{\rotatebox[origin=c]{270}{$\rightarrowRHD$}}
@@ -478,9 +595,8 @@
 
 
 % Tick and cross for present and absent
-\usepackage{pifont}% http://ctan.org/pkg/pifont
 \newcommand{\cmark}{\checkmark}%\ding{51}}%
-\newcommand{\xmark}{\ding{53}}%
+\newcommand{\xmark}{\ding{53}}
 \newcommand{\autoBraces}[1]{\left(#1\right)}
 
 \newcommand{\filledCircle}{\tikz\draw[black,fill=black] (0,0) circle (.7ex);}
@@ -489,6 +605,7 @@
 % Shengjie Commands
 \newcommand{\tr}{^{\!\top}}
 \newcommand{\invtr}{^{\text{-}\!\top}}
+\DeclareMathOperator{\sign}{sgn}
 
 % No indent heading
 \newcommand{\noIndentHeading}[1]{\noindent\textbf{#1}}
@@ -498,5 +615,11 @@
 \newcommand{\XL}[1]{{\color{XLcolor}{\textbf{XL}: #1}  }}  % Donot use \textcolor. It breaks for line-breaks.
 \newcommand{\abhinav}{{\color{blue}{Abhinav}  }}
 \newcommand{\shengjie}{{\color{orange}{Shengjie}}}
+\newcommand{\YG}{\textcolor{blue}}
 \newcommand{\CCtext}[1]{{\color{my_blue}{#1}}}
 \newcommand{\futureWrite}[1]{{\color{red}{WRITE: #1}  }}
+
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\todo}[1]{{\color{red}#1}}
+\newcommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
+\newcommand\colCancel[2][red]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
