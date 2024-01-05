@@ -10,49 +10,53 @@
 \definecolor{my_green}{rgb}{0.0, 0.9, 0.24}
 \definecolor{my_green_2}{rgb}{0.0, 0.4, 0.0}
 
+% Seaborn colors
+% sns[1] {0.2, 0.06, 0.40}
+% sns[2] {0.34, 0.08, 0.49}
+% sns[3] {0.49, 0.14, 0.51}
+% sns[5] {0.78, 0.24, 0.45}
+% sns[6] {0.91, 0.33, 0.38}
+\definecolor{sns_yellow}{rgb}{1.0, 0.83, 0.59}
+\definecolor{sns_violet}{rgb}{0.34, 0.08, 0.49}
+\definecolor{sns_orange}{rgb}{0.78, 0.24, 0.45}
+\definecolor{sns_blue}{rgb}{0.2, 0.06, 0.40}
+
 %Citation color
+\definecolor{white}{rgb}{1.0, 1.0, 1.0}
 \definecolor{darkGreen}{rgb}{0.01, 0.8, 0.24}%{0.31, 0.94, 0.3}%{0.09,0.88,0.00}{0.29, 0.83, 0.38}
 \definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
-\definecolor{lightgreen}{HTML}{90EE90}
-\definecolor{Gray}{gray}{0.95}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{lightgreen}{HTML}{90EE90}
+\definecolor{new_green}{rgb}{0.75,0.97,0.44}
+\definecolor{Gray}{gray}{0.95}
+\definecolor{lightgray}{rgb}{0.96, 0.96, 0.96}
 
 \definecolor{set1_cyan}{rgb}{0.23, 0.87, 1.0}
 \definecolor{building}{rgb}{0.2, 0.33, 0.33}
 
-\definecolor{backward_color}{rgb}{1.0, 0.6, 0.2}
-\definecolor{forward_color}{rgb}{0.2, 1.0, 0.6}
-
-\definecolor{my_violet}{rgb}{0.79, 0.40, 1} %{0.73,0.62,0.91}  %
-% \definecolor{my_yellow}{rgb}{0.9, 0.8, 0.54}
-% \definecolor{my_yellow_2}{rgb}{1, 0.75, 0.}
+\definecolor{my_violet}{rgb}{0.79, 0.40, 1} %{0.73,0.62,0.91}
+\definecolor{my_yellow_2}{rgb}{0.9, 0.8, 0.54}
 \definecolor{my_red}{rgb}{1,0,0}
 \definecolor{my_purple}{rgb}{0.27,0.8, 0.8}
-\definecolor{new_green}{rgb}{0.75,0.97,0.44}
 \definecolor{my_orange}{rgb}{1.0,0.6,0.35}
-
-\definecolor{lightgray}{rgb}{0.96, 0.96, 0.96}
-\definecolor{white}{rgb}{1.0, 1.0, 1.0}
+\definecolor{my_golden}{rgb}{1.0, 0.75, 0.0}
+\colorlet{my_gray}{gray!20}
 
 \definecolor{projectionColor}{rgb}{0.2, 0.6, 1}
 \definecolor{rayColor}{rgb}{0.0,0.0,0.0}
 \definecolor{axisColor}{rgb}{0.0, 0.0, 0.0}
-\definecolor{rayColor}{rgb}{0.0, 0.0, 0.0}
-
 \colorlet{projectionBorderShade}{rayColor!100}
 \colorlet{projectionFillShade}{projectionColor!20}
-\colorlet{rayShade}{my_yellow!100}
+\colorlet{rayShade}{sns_yellow}
 \colorlet{axisShade}{axisColor!20}
 \colorlet{axisShadeDark}{axisColor!100}
 
+\definecolor{backward_color}{rgb}{1.0, 0.6, 0.2}
+\definecolor{forward_color}{rgb}{0.2, 1.0, 0.6}
+
 % Table row Colors
-\definecolor{LightCyan}{rgb}{0.88,1,1}
 \definecolor{gain}{HTML}{34a853}
 \definecolor{lost}{HTML}{ea4335}
-
-\newcommand{\green}[1]{\scriptsize\textcolor{ForestGreen}{#1}}
-%\newcommand{\red}[1]{\scriptsize\textcolor{red}{#1}}
-
 \colorlet{proposedShade}{darkGreen}
 \colorlet{vanillaShade}{red!90}
 
@@ -75,6 +79,7 @@
 \newcommand{\CCtext}[1]{{\color{my_blue}{#1}}}
 \newcommand{\futureWrite}[1]{{\color{red}{WRITE: #1}  }}
 
+\newcommand{\green}[1]{\scriptsize\textcolor{ForestGreen}{#1}}
 \newcommand{\red}[1]{{\color{red}#1}}
 \newcommand{\todo}[1]{{\color{red}#1}}
 \newcommand{\TODO}[1]{\textbf{\color{red}[TODO: #1]}}
@@ -86,10 +91,12 @@
 \newcommand{\thatIs}{\textit{i.e.}\xspace}
 \newcommand{\etcetera}{\textit{etc.}\xspace}
 \newcommand{\argmax}{\operatornamewithlimits{argmax}}
+% \newcommand{\wrt}{\textit{wrt}\xspace}
 %\newcommand{\etal}{\textit{et~al.}\xspace}
 
 \newcommand{\filledCircle}{\tikz\draw[black,fill=black] (0,0) circle (.7ex);}
 \newcommand{\semiCircle}{\tikz\fill[black] (90:.7ex) -- (-90:.7ex) arc (-90:90:.7ex) -- cycle;}
+
 % Tick and cross for present and absent
 \newcommand{\cmark}{\checkmark}%\ding{51}}%
 \newcommand{\xmark}{\ding{53}}
@@ -179,7 +186,10 @@
 \newcommand{\denseNetOneTwoOne}{DenseNet-121\xspace}
 \newcommand{\resNetEighteen}{ResNet-18\xspace}
 \newcommand{\resNetFifty}{ResNet-50\xspace}
+\newcommand{\resNetOneHundredOne}{ResNet-101\xspace}
 \newcommand{\rsuNet}{RSUNet\xspace}
+\newcommand{\vovNet}{V2-99\xspace}
+\newcommand{\efficientDet}{EfficientDet\xspace}
 \newcommand{\pretrain}{pretrain\xspace}
 \newcommand{\bigRes}{320\!\times\!1024}
 \newcommand{\smallRes}{192\!\times\!680}
@@ -225,6 +235,7 @@
 \newcommand{\offset}{\text{offset}}
 \newcommand{\heatmap}{\text{heatmap}}
 \newcommand{\class}{{class}}
+\newcommand{\weightSeg}{\lambda_{seg}}
 
 % Metric
 \newcommand{\MAP}{mAP\xspace}
@@ -257,6 +268,8 @@
 \newcommand{\sqRel}{Sq Rel\xspace}
 \newcommand{\rmse}{RMSE\xspace}
 \newcommand{\rmseLog}{RMSE log\xspace}
+\newcommand{\logTen}{log$_{10}$\xspace}
+\newcommand{\siLog}{SI\textsubscript{log}\xspace}
 \newcommand{\aOne}{a_1\xspace}
 \newcommand{\aTwo}{a_2\xspace}
 \newcommand{\aThree}{a_3\xspace}
@@ -266,21 +279,27 @@
 \newcommand{\meanEleven}{M$_\text{All}$}
 
 % Ranking
-\newcommand{\first}[1]{$\textcolor{my_blue}{\mathbf{#1}}$}
-\newcommand{\second}[1]{$\textcolor{my_magenta}{\mathbf{#1}}$}
-\newcommand{\firstKey}[1]{\textcolor{my_blue}{\textbf{#1}}}
-\newcommand{\secondKey}[1]{\textcolor{my_magenta}{\textbf{#1}}}
-\newcommand{\sota}{SOTA\xspace}
+\newcommand{\first}[1]{$\textcolor{sns_blue}{\mathbf{#1}}$}
+\newcommand{\second}[1]{$\textcolor{sns_orange}{\mathbf{#1}}$}
+\newcommand{\firstKey}[1]{\textcolor{sns_blue}{\textbf{#1}}}
+\newcommand{\secondKey}[1]{\textcolor{sns_orange}{\textbf{#1}}}
+\newcommand{\sota}{SoTA\xspace}
 \newcommand{\best}[1]{$\mathbf{#1}$}
 \newcommand{\bestKey}[1]{\textbf{#1}}
 \newcommand{\gain}[1]{\textcolor{gain}{#1}}
 \newcommand{\lost}[1]{\textcolor{lost}{#1}}
 \newcommand{\good}[2]{{$#1$} {({\gain{\textbf{+}$\mathbf{#2}$}})}}
 \newcommand{\bad}[2]{{$#1$} {({\lost{--$#2$}})}}
-\newcommand{\released}{$\!^\circ$}
+\newcommand{\arxiv}{ArXiv\xspace}
+\newcommand{\mySign}{\!+\!}
+\newcommand{\mathDash}{$-$}
+
+\def\relicon{\resizebox{.009\textwidth}{!}{\includegraphics{images/1410037-200.png}}}
+\newcommand{\released}{$\!^{\relicon}$}
 \newcommand{\retrained}{$\!^\dagger$}
 \newcommand{\reimplemented}{$\!^*$}
-\newcommand{\cbgs}{$\!^\mathsection$}
+\newcommand{\cbgs}{$\!^{\mathsection}$}
+\newcommand{\future}{$\!^{\tiny{\fullmoon}\hspace{-0.03cm}\tiny{\newmoon}}$}%{$\!{\circ}$}
 
 % Previous Mono3D Methods
 \newcommand{\mthreeDRPN}{M3D-RPN\xspace}
@@ -295,6 +314,7 @@
 \newcommand{\ddmp}{DDMP-3D\xspace}
 \newcommand{\caddn}{CaDDN\xspace}
 \newcommand{\patchNet}{PatchNet\xspace}
+\newcommand{\monodtr}{MonoDTR\xspace}
 \newcommand{\detrThreeD}{DETR3D\xspace}
 \newcommand{\fcosThreeD}{FCOS3D\xspace}
 \newcommand{\pgd}{PGD\xspace}
@@ -303,26 +323,39 @@
 \newcommand{\bevFormer}{BEVFormer\xspace}
 \newcommand{\polarFormer}{PolarFormer\xspace}
 \newcommand{\bevDepth}{BEVDepth\xspace}
-\newcommand{\bevDetFourD}{BEVDet4D\xspace}
 \newcommand{\bevStereo}{BEVStereo\xspace}
+\newcommand{\bevDetFourD}{BEVDet4D\xspace}
 \newcommand{\beVerse}{BEVerse\xspace}
 \newcommand{\beVerseTiny}{BEVerse-T\xspace}
 \newcommand{\beVerseSmall}{BEVerse-S\xspace}
 \newcommand{\orBoxNet}{Box Net\xspace}
+\newcommand{\uvtr}{UVTR\xspace}
+\newcommand{\veDet}{VEDet\xspace}
+\newcommand{\cape}{CAPE\xspace}
+\newcommand{\xThreeKDAll}{X3KD$_{\text{all}}$\xspace}
+\newcommand{\frustumFormer}{FrustumFormer\xspace}
 \newcommand{\threeDPPE}{3DPPE\xspace}
 \newcommand{\hop}{HoP\xspace}
+\newcommand{\parametricBEV}{ParametricBEV\xspace}
+\newcommand{\sparseBEV}{SparseBEV\xspace}
 \newcommand{\saBEV}{SA-BEV\xspace}
-\newcommand{\bevDetFourDHoP}{BEVDet4D+HoP\xspace}
+\newcommand{\fbBEV}{FB-BEV\xspace}
 \newcommand{\streamPETR}{StreamPETR\xspace}
+\newcommand{\bevDetFourDHoP}{BEVDet4D+HoP\xspace}
+\newcommand{\beVerseWithMethod}{BEVerse+SeaBird\xspace}
 \newcommand{\beVerseTinyWithMethod}{BEVerse-T+SeaBird\xspace}
 \newcommand{\beVerseSmallWithMethod}{BEVerse-S+SeaBird\xspace}
 \newcommand{\bevDetFourDHoPWithMethod}{BEVDet4D+HoP+SeaBird\xspace}
+\newcommand{\hopWithMethod}{HoP+SeaBird\xspace}
+\newcommand{\stxd}{STXD\xspace}
 
 % Previous BEV Segmentation Papers
-\newcommand{\imageToMaps}{Image2Maps\xspace}
-\newcommand{\imageToMapsWithMethod}{Image2Maps+SeaBird\xspace}
-\newcommand{\panopticBEV}{PanopticBEV\xspace}
-\newcommand{\panopticBEVWithMethod}{PanopticBEV+SeaBird\xspace}
+\newcommand{\imageToMaps}{I2M\xspace}
+\newcommand{\imageToMapsLong}{Image2Maps\xspace}
+\newcommand{\imageToMapsWithMethod}{I2M+SeaBird\xspace}
+\newcommand{\panopticBEV}{PBEV\xspace}
+\newcommand{\panopticBEVLong}{PanopticBEV\xspace}
+\newcommand{\panopticBEVWithMethod}{PBEV+SeaBird\xspace}
 
 % Previous Radar Image Detection Papers
 \newcommand{\centerFusion}{CenterFusion\xspace}
@@ -334,7 +367,7 @@
 \newcommand{\radiant}{RADIANT\xspace}
 
 % Previous Lidar Detection Papers
-\newcommand{\boxNet}{L-BoxNet\xspace}
+\newcommand{\lidarBoxNet}{L-BoxNet\xspace}
 \newcommand{\voteNet}{L-VoteNet\xspace}
 
 % Previous Denoising Papers
@@ -345,6 +378,8 @@
 \newcommand{\depthHints}{DepthHints\xspace}
 \newcommand{\edgeDepth}{EdgeDepth\xspace}
 \newcommand{\epcDepth}{EPCDepth\xspace}
+\newcommand{\idisc}{iDisc\xspace}
+\newcommand{\zoeDepth}{ZoeDepth\xspace}
 
 % SLAM Papers
 \newcommand{\slam}{SLAM\xspace}
@@ -494,9 +529,6 @@
 \newcommand{\shiftFunction}{\psi}
 \newcommand{\transformation}{transformation\xspace}
 \newcommand{\mobius}{M\"{o}bius\xspace}
-
-\newcommand{\mySign}{\!+\!}
-\newcommand{\mathDash}{$-$}
 
 \newcommand{\varX}{X}
 \newcommand{\varY}{Y}
