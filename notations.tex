@@ -11,15 +11,24 @@
 \definecolor{my_green_2}{rgb}{0.0, 0.4, 0.0}
 
 % Seaborn colors
+% colors_temp = sns.color_palette("magma", 10)
 % sns[1] {0.2, 0.06, 0.40}
 % sns[2] {0.34, 0.08, 0.49}
 % sns[3] {0.49, 0.14, 0.51}
 % sns[5] {0.78, 0.24, 0.45}
 % sns[6] {0.91, 0.33, 0.38}
-\definecolor{sns_blue}{rgb}{0.2, 0.06, 0.40}
-\definecolor{sns_violet}{rgb}{0.34, 0.08, 0.49}
-\definecolor{sns_orange}{rgb}{0.78, 0.24, 0.45}
-\definecolor{sns_yellow}{rgb}{1.0, 0.83, 0.59}
+% \definecolor{sns_blue}{rgb}{0.2, 0.06, 0.40}
+% \definecolor{sns_violet}{rgb}{0.34, 0.08, 0.49}
+% \definecolor{sns_orange}{rgb}{0.91, 0.33, 0.38}
+% colors_temp = sns.color_palette("magma", 20)
+% sns[3]  {0.21, 0.06, 0.42}
+% sns[6]  {0.45, 0.12, 0.51}
+% sns[10] {0.75, 0.22, 0.46}
+% sns[19] {0.99, 0.91, 0.66}
+\definecolor{sns_blue}{rgb}{0.21, 0.06, 0.42}
+\definecolor{sns_violet}{rgb}{0.45, 0.12, 0.51}
+\definecolor{sns_orange}{rgb}{0.75, 0.22, 0.46}
+\definecolor{sns_yellow}{rgb}{0.99, 0.91, 0.66}
 
 %Citation color
 \definecolor{white}{rgb}{1.0, 1.0, 1.0}
@@ -42,7 +51,7 @@
 \definecolor{my_purple}{rgb}{0.27,0.8, 0.8}
 \definecolor{my_orange}{rgb}{1.0,0.6,0.35}
 \definecolor{my_golden}{rgb}{1.0, 0.75, 0.0}
-\colorlet{my_gray}{gray!20}
+\colorlet{my_gray}{gray!12}
 
 \definecolor{projectionColor}{rgb}{0.2, 0.6, 1}
 \definecolor{rayColor}{rgb}{0.0,0.0,0.0}
@@ -297,8 +306,8 @@
 \newcommand{\firstKey}[1]{\textcolor{sns_blue}{\textbf{#1}}}
 \newcommand{\secondKey}[1]{\textcolor{sns_orange}{\textbf{#1}}}
 \newcommand{\sota}{SoTA\xspace}
-\newcommand{\best}[1]{$\mathbf{#1}$}
-\newcommand{\bestKey}[1]{\textbf{#1}}
+\newcommand{\best}[1]{$\textcolor{sns_blue}{\mathbf{#1}}$}
+\newcommand{\bestKey}[1]{\textcolor{sns_blue}{\textbf{#1}}}
 \newcommand{\gain}[1]{\textcolor{gain}{#1}}
 \newcommand{\lost}[1]{\textcolor{lost}{#1}}
 \newcommand{\good}[2]{{$#1$} {({\gain{\textbf{+}$\mathbf{#2}$}})}}
@@ -363,6 +372,7 @@
 \newcommand{\bevDetFourDHoPWithMethod}{BEVDet4D+HoP+SeaBird\xspace}
 \newcommand{\hopWithMethod}{HoP+SeaBird\xspace}
 \newcommand{\stxd}{STXD\xspace}
+\newcommand{\cubeRCNN}{Cube R-CNN\xspace}
 
 % Previous BEV Segmentation Papers
 \newcommand{\imageToMaps}{I2M\xspace}
