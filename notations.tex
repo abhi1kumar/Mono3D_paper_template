@@ -178,6 +178,7 @@
 % Object Detection
 %===============================================================================
 \newcommand{\monoThreeD}{Mono3D\xspace}
+\newcommand{\monoDE}{MonoDE\xspace}
 
 \newcommand{\oneD}{$1$D\xspace}
 \newcommand{\twoD}{$2$D\xspace}
@@ -192,6 +193,7 @@
 \newcommand{\iouThreeD}{IoU$_{3\text{D}}$\xspace}
 \newcommand{\iouThreeDMath}{\text{\iou}_{3\text{D}}\xspace}
 \newcommand{\lidar}{LiDAR\xspace}
+\newcommand{\lidars}{LiDARs\xspace}
 \newcommand{\radar}{radar\xspace}
 \newcommand{\Radar}{Radar\xspace}
 \newcommand{\giouTwoD}{g\iouTwoD}
@@ -237,6 +239,7 @@
 \newcommand{\kittiThreeSixtyPanoptic}{\kittiThreeSixty PanopticBEV\xspace}
 \newcommand{\semanticKITTI}{Semantic KITTI\xspace}
 \newcommand{\carla}{CARLA\xspace}
+\newcommand{\ddad}{DDAD\xspace}
 
 % Loss 
 \newcommand{\loss}{\mathcal{L}}
@@ -337,8 +340,11 @@
 \newcommand{\caddn}{CaDDN\xspace}
 \newcommand{\patchNet}{PatchNet\xspace}
 \newcommand{\monodtr}{MonoDTR\xspace}
+\newcommand{\monorun}{MonoRUn\xspace}
 \newcommand{\monodle}{MonoDLE\xspace}
 \newcommand{\monodetr}{MonoDETR\xspace}
+\newcommand{\monopair}{MonoPair\xspace}
+\newcommand{\dFourLCN}{D4LCN\xspace}
 \newcommand{\detrThreeD}{DETR3D\xspace}
 \newcommand{\fcosThreeD}{FCOS3D\xspace}
 \newcommand{\pgd}{PGD\xspace}
@@ -526,6 +532,52 @@
 \newcommand{\gradTimeEuc}{{}^2\gradTimeVanilla}
 \newcommand{\gradTimeDice}{{}^d\gradTimeVanilla}
 \newcommand{\bigNumber}{M}
+
+% ALADIN Notations
+% \newcommand{\methodName}{ALADIN\xspace}
+\newcommand{\methodName}{RODEO\xspace}
+\newcommand{\fov}{FOV\xspace}
+\newcommand{\depthmap}{depthmap\xspace}
+\newcommand{\depthmaps}{depthmaps\xspace}
+\newcommand{\Depthmap}{Depthmap\xspace}
+\newcommand{\Depthmaps}{Depthmaps\xspace}
+\newcommand{\stereoLeft}{l}
+\newcommand{\stereoRight}{r}
+\newcommand{\lidarSym}{L}
+\newcommand{\setOfThreeDPts}{\mathcal{V}}
+\newcommand{\setOfLidarPts}{\setOfThreeDPts_\lidarSym}
+\newcommand{\pixel}{\mathbf{p}}
+\newcommand{\zeroVec}{\mathbf{0}}
+\newcommand{\ray}{\mathcal{R}}
+\newcommand{\rayDir}{\mathbf{r}}
+\newcommand{\intrinsic}{\mathbf{K}}
+\newcommand{\intrinsicRGB}{\intrinsic_R}
+\newcommand{\singleLidarPt}{\mathbf{v}}
+\newcommand{\lidarRay}{\ray_\lidarSym}
+\newcommand{\trans}{t}
+\newcommand{\transVec}{\mathbf{t}}
+\newcommand{\extrinsic}{\mathbf{T}}
+\newcommand{\rotMat}{\mathbf{R}}
+\newcommand{\leftPixelSym}{p}
+\newcommand{\rightPixelSym}{q}
+\newcommand{\leftPixel}{\mathbf{\leftPixelSym}}
+\newcommand{\rightPixel}{\mathbf{\rightPixelSym}}
+\newcommand{\idntyMat}{\mathbf{I}}
+\newcommand{\xcoord}{x}
+\newcommand{\ycoord}{y}
+\newcommand{\zcoord}{z}
+\newcommand{\transpose}{\intercal}
+\newcommand{\matRow}{\mathbf{m}}
+\newcommand{\realDomain}{\mathbb{R}}
+\newcommand{\lineSym}{\mathbf{l}}
+\newcommand{\crossProdMat}[1]{[{#1}_\times]}
+\newcommand{\dispMag}{\alpha}
+\newcommand{\dispDir}{\mathbf{n}}
+\newcommand{\setOfLeftPixels}{\mathcal{\MakeUppercase\leftPixelSym}}
+\newcommand{\setOfRightPixels}{\mathcal{\MakeUppercase\rightPixelSym}}
+\newcommand{\threshold}{\lambda}
+\newcommand{\setOfOccPixels}{\mathcal{O}}
+\newcommand{\projection}{\pi}
 
 % Equivariance related
 \newcommand{\equivariant} {equivariant\xspace}
