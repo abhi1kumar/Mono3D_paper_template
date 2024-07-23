@@ -53,10 +53,8 @@
 \usepackage{tocloft}             % Adjusting TOC
 
 
-\definecolor{lightgreen}{HTML}{90EE90}
-\newcommand{\coloredeq}[2]{\begin{empheq}[box=\colorbox{lightgreen}]{align}\label{#1}#2\end{empheq}}
-\newcommand{\NParagraph}[1]{\vspace{0.6mm} \noindent \textbf{#1}
-\hspace{0mm}}
+\setlist[itemize, 1]{label =\raisebox{-0.4\height}{\scalebox{1.7}{\textbullet}}}
+\setlist[itemize]{noitemsep, topsep=0cm, leftmargin=3mm}
 
 \captionsetup{font=small}        % Figures and Tables would have small captions 
 \allowdisplaybreaks              % Break aligned equations
