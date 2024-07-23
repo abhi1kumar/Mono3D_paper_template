@@ -44,8 +44,14 @@
 \usepackage{enumitem}            % for noindent itemize
 \usepackage{empheq}
 \usepackage{gensymb}             % for degree symbol
-\usepackage{wrapfig}             % for wraptable
 \usepackage{xspace}              % for dynamic controlled space at end of abbreviation
+\usepackage{wrapfig}             % for wraptable
+\usepackage[thicklines]{cancel}  % for cancel
+\usepackage{arydshln}            % for horizontal dash line
+\usepackage{pifont}              % for ticks and cross http://ctan.org/pkg/pifont
+\usepackage{hhline}              % for hhline
+\usepackage{tocloft}             % Adjusting TOC
+
 
 \definecolor{lightgreen}{HTML}{90EE90}
 \newcommand{\coloredeq}[2]{\begin{empheq}[box=\colorbox{lightgreen}]{align}\label{#1}#2\end{empheq}}
@@ -65,6 +71,7 @@
 \@namedef{ver@everyshi.sty}{}
 \makeatother
 \usepackage{tikz} % for some figures
+\usetikzlibrary{shapes.geometric} % for trapezium
 \usetikzlibrary{calc}  % for centerarc
 \usetikzlibrary{arrows}
 \usetikzlibrary{arrows.meta}
