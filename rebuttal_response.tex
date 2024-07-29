@@ -7,7 +7,8 @@
 %\usepackage{times}
 
 \usepackage{comment}
-\usepackage{amsmath,amssymb} % define this before the line numbering.
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{color}
 
 % The "axessiblity" package can be found at: https://ctan.org/pkg/axessibility?lang=en
@@ -18,7 +19,7 @@
 % Include other packages here
 %============================================================================
 \usepackage{graphicx}
-%\usepackage{amsthm}           % for proof
+\usepackage{amsthm}           % for proof
 \usepackage{booktabs}
 
 \usepackage{epsfig}
@@ -44,6 +45,7 @@
 \usepackage{enumitem}            % for noindent itemize
 \usepackage{empheq}
 \usepackage{gensymb}             % for degree symbol
+\usepackage{wrapfig}             % for wraptable
 \usepackage{xspace}              % for dynamic controlled space at end of abbreviation
 \usepackage{wrapfig}             % for wraptable
 \usepackage[thicklines]{cancel}  % for cancel
@@ -60,6 +62,13 @@
 \allowdisplaybreaks              % Break aligned equations
 
 \graphicspath{{images/}}
+
+%===============================================================================
+% For Theorem
+%===============================================================================
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}
 
 %===============================================================================
 % For diagrams in Latex
@@ -79,9 +88,17 @@
 \def\centerarc[#1](#2)(#3:#4:#5)% Syntax: [draw options] (center) (initial angle:final angle:radius)
     { \draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5); }
 
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
+%===============================================================================
+% For algorithms
+%===============================================================================
+% Good code at https://tex.stackexchange.com/a/482249
+\usepackage[ruled,linesnumbered]{algorithm2e}  %linesnumbered, vlined for no linenumbers
+% \SetKwIF{If}{ElseIf}{Else}{if}{then}{else if}{else}{end if}%
+\SetKwIF{If}{ElseIf}{Else}{if}{}{else if}{else}{}
+\SetKwFor{For}{for}{do}{end}
+\SetKwComment{Comment}{$\triangleright$\ }{}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
 
 \input{notations}
 
@@ -90,8 +107,6 @@
 \newcommand{\revThree}{{\color{my_magenta}{R3}}}
 \newcommand{\revFour}{{\color{my_blue}{R4}}}
 
-
-
 \usepackage[pagebackref,breaklinks,colorlinks,citecolor={my_blue},urlcolor=black]{hyperref}
 % Support for easy cross-referencing
 \usepackage[capitalize]{cleveref}
@@ -99,7 +114,10 @@
 \Crefname{section}{Section}{Sections}
 \Crefname{table}{Table}{Tables}
 \crefname{table}{Tab.}{Tabs.}
-
+\crefname{figure}{Fig.}{Figs.}
+\Crefname{figure}{Figure}{Figures}
+\crefname{theorem}{Th.}{Th.}
+\Crefname{theorem}{Theorem}{Theorems}
 
 %\title{ Simultaneous Localization and Mapping for Dynamic Scenes}
 %\author{Xiaoming Liu}
