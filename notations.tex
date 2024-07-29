@@ -74,6 +74,7 @@
 
 \colorlet{theme_color}{sns_orange}%my_yellow
 \colorlet{theme_color_light}{sns_yellow!25}
+\colorlet{link_color}{Maroon}
 
 % Scale qualitative figures by this fraction
 \newcommand{\figureScaleFraction}{0.9}
@@ -136,6 +137,7 @@
 %===============================================================================
 % Scale tables by this fraction
 \newcommand{\scaleFraction}{0.9}
+\newcommand{\scaleFractionSeaBird}{0.8}
 
 % Table rules
 \newcommand{\myTopRule}{\Xhline{2\arrayrulewidth}}
@@ -249,6 +251,7 @@
 \newcommand{\sunRGBD}{SunRGBD\xspace}
 \newcommand{\omniThreeD}{Omni3D\xspace}
 \newcommand{\objaverse}{Objaverse\xspace}
+\newcommand{\coda}{CODa\xspace}
 
 % Loss 
 \newcommand{\loss}{\mathcal{L}}
@@ -328,7 +331,7 @@
 \newcommand{\mySign}{\!+\!}
 \newcommand{\mathDash}{$-$}
 
-\def\relicon{\resizebox{.009\textwidth}{!}{\includegraphics{images/1410037-200.png}}}
+\def\relicon{\resizebox{.009\textwidth}{!}{\includegraphics{images/seabird/1410037-200.png}}}
 \newcommand{\released}{$\!^{\relicon}$}
 \newcommand{\retrained}{$\!^\dagger$}
 \newcommand{\reimplemented}{$\!^*$}
@@ -340,9 +343,12 @@
 \newcommand{\kinematicImage}{Kinematic (Image)\xspace}
 \newcommand{\kinematicVideo}{Kinematic (Video)\xspace}
 \newcommand{\groomedNMS}{GrooMeD-NMS\xspace}
+\newcommand{\groomedNMSFull}{Grouped Mathematically Differentiable NMS\xspace}
+\newcommand{\groomedNMSShort}{GrooMeD\xspace}
 \newcommand{\monoDISMulti}{MonoDIS-M\xspace}
 \newcommand{\gupNet}{GUP Net\xspace}
 \newcommand{\deviant}{DEVIANT\xspace}
+\newcommand{\deviantFull}{Depth Equivariant Network\xspace}
 \newcommand{\pseudoLidar}{Pseudo-{\lidar}\xspace}
 \newcommand{\ddThreeD}{DD3D\xspace}
 \newcommand{\ddmp}{DDMP-3D\xspace}
@@ -389,6 +395,8 @@
 \newcommand{\stxd}{STXD\xspace}
 \newcommand{\cubeRCNN}{Cube R-CNN\xspace}
 \newcommand{\unimode}{UniMODE\xspace}
+\newcommand{\seabird}{SeaBird\xspace}
+\newcommand{\seabirdFull}{Segmentation in Bird's View\xspace}
 
 % Previous BEV Segmentation Papers
 \newcommand{\imageToMaps}{I2M\xspace}
@@ -696,6 +704,8 @@
 \newcommand{\scaleNotation}{s}
 
 % Convolution
+\newcommand{\conv}{*}
+\newcommand{\filter}{\Psi}
 \newcommand{\vanillaBlock}{vanilla block\xspace}
 \newcommand{\vanillaBlocks}{vanilla blocks\xspace}
 \newcommand{\vanillaConv}{vanilla convolution\xspace}
