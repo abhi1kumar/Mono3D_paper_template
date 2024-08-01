@@ -352,13 +352,6 @@
   year={2023}
 }
 
-@inproceedings{jia2023monouni,
-  title={{MonoUNI}: A Unified Vehicle and Infrastructure-side Monocular {\threeD} Object Detection Network with Sufficient Depth Clues},
-  author={Jia, Jinrang and Li, Zhenjia and Shi, Yifeng},
-  booktitle={NeurIPS},
-  year={2023}
-}
-
 @inproceedings{choi2023depth,
   title={Depth-discriminative Metric Learning for Monocular {\threeD} Object Detection},
   author={Choi, Wonhyeok and Shin, Mingyu and Im, Sunghoon},
@@ -984,15 +977,8 @@
 }
 
 %===============================================================================
-% Out of Distribution Generalization
+% Robustness
 %===============================================================================
-@inproceedings{xu2021how,
-  title={How Neural Networks Extrapolate: From Feedforward to Graph Neural Networks},
-  author={Xu, Keyulu and Zhang, Mozhi and Li, Jingling and Du, Simon S and Kawarabayashi, Ken-ichi and Jegelka, Stefanie},  
-  booktitle={ICLR},
-  year={2021},
-}
-
 @inproceedings{zhu2023understanding,
   title={Understanding the Robustness of {\threeD} Object Detection With Bird's-Eye-View Representations in Autonomous Driving},
   author={Zhu, Zijian and Zhang, Yichi and Chen, Hai and Dong, Yinpeng and Zhao, Shu and Ding, Wenbo and Zhong, Jiachen and Zheng, Shibao},
@@ -1004,6 +990,20 @@
   title={Benchmarking Robustness of {\threeD} Object Detection to Common Corruptions},
   author={Dong, Yinpeng and Kang, Caixin and Zhang, Jinlai and Zhu, Zijian and Wang, Yikai and Yang, Xiao and Su, Hang and Wei, Xingxing and Zhu, Jun},
   booktitle={CVPR},
+  year={2023}
+}
+
+@inproceedings{yang2023bevheight,
+  title={{\bevHeight}: A Robust Framework for Vision-based Roadside {\threeD} Object Detection},
+  author={Yang, Lei and Yu, Kaicheng and Tang, Tao and Li, Jun and Yuan, Kun and Wang, Li and Zhang, Xinyu and Chen, Peng},
+  booktitle={CVPR},
+  year={2023}
+}
+
+@inproceedings{jia2023monouni,
+  title={{MonoUNI}: A Unified Vehicle and Infrastructure-side Monocular {\threeD} Object Detection Network with Sufficient Depth Clues},
+  author={Jia, Jinrang and Li, Zhenjia and Shi, Yifeng},
+  booktitle={NeurIPS},
   year={2023}
 }
 
@@ -1028,24 +1028,96 @@
   year={2024}
 }
 
+%===============================================================================
+% Out of Distribution Generalization
+%===============================================================================
+@inproceedings{xu2021how,
+  title={How Neural Networks Extrapolate: From Feedforward to Graph Neural Networks},
+  author={Xu, Keyulu and Zhang, Mozhi and Li, Jingling and Du, Simon and Kawarabayashi, Ken-ichi and Jegelka, Stefanie},  
+  booktitle={ICLR},
+  year={2021},
+}
 
-%===============================================================================
-% Monocular Depth Estimation
-%===============================================================================
-@inproceedings{eigen2015predicting,
-  title={Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture},
-  author={Eigen, David and Fergus, Rob},
+@inproceedings{teney2023id,
+  title={{ID} and {\ood} performance are sometimes inversely correlated on real-world datasets},
+  author={Teney, Damien and Lin, Yong and Oh, Seong Joon and Abbasnejad, Ehsan},
+  booktitle={NeurIPS},
+  year={2023}
+}
+
+@inproceedings{sarkar2024shadows,
+  title={Shadows Don't Lie and Lines Can't Bend! Generative Models don't know Projective Geometry... for now},
+  author={Sarkar, Ayush and Mai, Hanlin and Mahapatra, Amitabh and Lazebnik, Svetlana and Forsyth, David and Bhattad, Anand},
+  booktitle={CVPR},
+  year={2024}
+}
+
+% Data
+@inproceedings{teney2021unshuffling,
+  title={Unshuffling data for improved generalization in visual question answering},
+  author={Teney, Damien and Abbasnejad, Ehsan and Hengel, Anton},
   booktitle={ICCV},
-  year={2015}
+  year={2021}
 }
 
-@inproceedings{garg2016unsupervised,
-  title={Unsupervised {CNN} for single view depth estimation: Geometry to the rescue},
-  author={Garg, Ravi and Bhagavatula, Vijayakumar and Carneiro, Gustavo and Reid, Ian},
-  booktitle={ECCV},
-  year={2016}
+
+% Features
+@inproceedings{yashima2022feature,
+  title={Feature space particle inference for neural network ensembles},
+  author={Yashima, Shingo and Suzuki, Teppei and Ishikawa, Kohta and Sato, Ikuro and Kawakami, Rei},
+  booktitle={ICML},
+  year={2022}
 }
 
+@inproceedings{tiwari2023overcoming,
+  title={Overcoming simplicity bias in deep networks using a feature sieve},
+  author={Tiwari, Rishabh and Shenoy, Pradeep},
+  booktitle={ICML},
+  year={2023}
+}
+
+% Labels
+@inproceedings{lee2022diversify,
+  title={Diversify and disambiguate: Learning from underspecified data},
+  author={Lee, Yoonho and Yao, Huaxiu and Finn, Chelsea},
+  booktitle={ICLR},
+  year={2022}
+}
+
+% Gradients
+@inproceedings{ross2018learning,
+  title={Learning qualitatively diverse and interpretable rules for classification},
+  author={Ross, Andrew Slavin and Pan, Weiwei and Doshi-Velez, Finale},
+  booktitle={ICML Workshops},
+  year={2018}
+}
+
+@inproceedings{teney2022evading,
+  title={Evading the simplicity bias: Training a diverse set of models discovers solutions with superior {\ood} generalization},
+  author={Teney, Damien and Abbasnejad, Ehsan and Lucey, Simon and Hengel, Anton},
+  booktitle={CVPR},
+  year={2022}
+}
+
+% Loss
+@inproceedings{sagawa2019distributionally,
+  title={Distributionally robust neural networks for group shifts: On the importance of regularization for worst-case generalization},
+  author={Sagawa, Shiori and Koh, Pang Wei and Hashimoto, Tatsunori B and Liang, Percy},
+  booktitle={ICLR},
+  year={2019}
+}
+
+@inproceedings{puli2023don,
+  title={Don’t blame dataset shift! shortcut learning due to gradients and cross entropy},
+  author={Puli, Aahlad Manas and Zhang, Lily and Wald, Yoav and Ranganath, Rajesh},
+  booktitle={NeurIPS},
+  year={2023}
+}
+
+
+%===============================================================================
+% Monocular Self-Supervised Depth Estimation 
+%===============================================================================
 @inproceedings{pillai2019superdepth,
   title={Superdepth: Self-supervised, super-resolved monocular depth estimation},
   author={Pillai, Sudeep and Ambrus, Rares and Gaidon, Adrien},
@@ -1110,7 +1182,7 @@
 }
 
 %===============================================================================
-% Monocular Depth with Extra Constraints
+% Monocular Self-Supervised Depth with Extra Constraints
 %===============================================================================
 @inproceedings{ranjan2019competitive,
   title={Competitive collaboration: Joint unsupervised learning of depth, camera motion, optical flow and motion segmentation},
@@ -1127,7 +1199,7 @@
 }
 
 %===============================================================================
-% Monocular Videos
+% Monocular Self-Supervised Depth with Videos
 %===============================================================================
 @inproceedings{zhou2017unsupervised,
   title={Unsupervised learning of depth and ego-motion from video},
@@ -1148,6 +1220,59 @@
   author={Yang, Gengshan and Ramanan, Deva},
   booktitle={CVPR},
   year={2020}
+}
+
+
+%===============================================================================
+% Monocular Supervised Depth Estimation
+%===============================================================================
+@inproceedings{eigen2015predicting,
+  title={Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture},
+  author={Eigen, David and Fergus, Rob},
+  booktitle={ICCV},
+  year={2015}
+}
+
+@inproceedings{garg2016unsupervised,
+  title={Unsupervised {CNN} for single view depth estimation: Geometry to the rescue},
+  author={Garg, Ravi and Bhagavatula, Vijayakumar and Carneiro, Gustavo and Reid, Ian},
+  booktitle={ECCV},
+  year={2016}
+}
+
+@inproceedings{piccinelli2023idisc,
+  title={{\idisc}: Internal discretization for monocular depth estimation},
+  author={Piccinelli, Luigi and Sakaridis, Christos and Yu, Fisher},
+  booktitle={CVPR},
+  year={2023}
+}
+
+@inproceedings{yin2023metric3d,
+  title={{\metricThreeD}: Towards zero-shot metric {\threeD} prediction from a single image},
+  author={Yin, Wei and Zhang, Chi and Chen, Hao and Cai, Zhipeng and Yu, Gang and Wang, Kaixuan and Chen, Xiaozhi and Shen, Chunhua},
+  booktitle={ICCV},
+  year={2023}
+}
+
+@inproceedings{yang2023gedepth,
+  title={{\geDepth}: Ground embedding for monocular depth estimation},
+  author={Yang, Xiaodong and Ma, Zhuang and Ji, Zhiyu and Ren, Zhe},
+  booktitle={ICCV},
+  year={2023}
+}
+
+@article{hu2024metric3dv2,
+  title={{\metricThreeDvTwo}: A Versatile Monocular Geometric Foundation Model for Zero-shot Metric Depth and Surface Normal Estimation},
+  author={Hu, Mu and Yin, Wei and Zhang, Chi and Cai, Zhipeng and Long, Xiaoxiao and Chen, Hao and Wang, Kaixuan and Yu, Gang and Shen, Chunhua and Shen, Shaojie},
+  journal={arXiv preprint arXiv:2404.15506},
+  year={2024}
+}
+
+@inproceedings{piccinelli2024unidepth,
+  title={{\uniDepth}: Universal Monocular Metric Depth Estimation},
+  author={Piccinelli, Luigi and Yang, Yung-Hsu and Sakaridis, Christos and Segu, Mattia and Li, Siyuan and Van Gool, Luc and Yu, Fisher},
+  booktitle={CVPR},
+  year={2024}
 }
 
 %===============================================================================
@@ -1598,6 +1723,21 @@
   booktitle={CVPR},
   year={2001}
 }
+
+@inproceedings{strecha2003dense,
+  title={Dense matching of multiple wide-baseline views},
+  author={Strecha, Christoph and Tuytelaars, Tinne and Van Gool, Luc},
+  booktitle={ICCV},
+  year={2003}
+}
+
+@inproceedings{strecha2004wide,
+  title={Wide-baseline stereo from multiple views: a probabilistic account},
+  author={Strecha, Christoph and Fransens, Rik and Van Gool, Luc},
+  booktitle={CVPR},
+  year={2004}
+}
+
 
 @inproceedings{dalal2005histograms,
   title={Histograms of oriented gradients for human detection},
