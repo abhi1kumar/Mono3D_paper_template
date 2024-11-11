@@ -170,21 +170,25 @@
 
 % Fancy set of arrows
 \providecommand\rightarrowRHD{\relbar\joinrel\mathrel\RHD}
-\providecommand\rightarrowrhd{\relbar\joR101inrel\mathrel\rhd}
+\providecommand\rightarrowrhd{\relbar\joinrel\mathrel\rhd}
 \providecommand\longrightarrowRHD{\relbar\joinrel\relbar\joinrel\mathrel\RHD}
 \providecommand\longrightarrowrhd{\relbar\joinrel\relbar\joinrel\mathrel\rhd}
 
 \newcommand{\uparrowRHD}  {\rotatebox[origin=c]{90}{$\rightarrowRHD$}}
 \newcommand{\downarrowRHD}{\rotatebox[origin=c]{270}{$\rightarrowRHD$}}
+\newcommand{\leftarrowRHD}{\rotatebox[origin=c]{180}{$\rightarrowRHD$}}
 % up and down arros for showing higher/lower the better
 \newcommand{\uparrowRHDSmall}  {\raisebox{0.05\normalbaselineskip}{\scalebox{0.7}{\uparrowRHD}}}   %$\uparrow$
 \newcommand{\downarrowRHDSmall}{\raisebox{0.07\normalbaselineskip}{\scalebox{0.7}{\downarrowRHD}}} %$\downarrow$
+\newcommand{\rightarrowRHDSmall}{\raisebox{0.05\normalbaselineskip}{\scalebox{0.75}{$\rightarrowRHD$}}}   %$\uparrow$
+\newcommand{\leftarrowRHDSmall}{\raisebox{0.05\normalbaselineskip}{\scalebox{0.75}{$\leftarrowRHD$}}} %$\downarrow$
 
 %===============================================================================
 % Object Detection
 %===============================================================================
 \newcommand{\monoThreeD}{Mono3D\xspace}
 \newcommand{\monoDE}{MonoDE\xspace}
+\newcommand{\monoRecon}{MonoRecon\xspace}
 
 \newcommand{\oneD}{$1$D\xspace}
 \newcommand{\twoD}{$2$D\xspace}
@@ -298,11 +302,13 @@
 \newcommand{\mave}{mAVE\xspace}
 \newcommand{\maae}{mAAE\xspace}
 \newcommand{\NDS}{NDS\xspace}
+\newcommand{\MDE}{MDE\xspace}
 
 \newcommand{\levelOne}{Level\_1\xspace}
 \newcommand{\levelTwo}{Level\_2\xspace}
 \newcommand{\bracketPercentage}{[\%]}
 \newcommand{\imageOnly}{image-only\xspace}
+\newcommand{\apThreeDSeventy}{\ap$_{\!3\text{D}\!}$ 70\xspace}
 \newcommand{\apThreeDFifty}{\ap$_{\!3\text{D}\!}$ 50\xspace}
 \newcommand{\apThreeDTwentyFive}{\ap$_{\!3\text{D}\!}$ 25\xspace}
 
@@ -476,10 +482,44 @@
 \newcommand{\dominantHomoEigMatrix}{\mathbf{E}}
 \newcommand{\tangentWeight}{w}
 
-% Domain Generalization
+% Domain Generalization / Camera Height
 \newcommand{\ood}{OOD\xspace}
+\newcommand{\outDomain}{OOD\xspace}
 \newcommand{\inDomain}{ID\xspace}
-\newcommand{\outDomain}{\ood\xspace}
+\newcommand{\camConvs}{CAM-Convs\xspace}
+\newcommand{\Variation}{Height\xspace}
+\newcommand{\variation}{height\xspace}
+\newcommand{\variations}{heights\xspace}
+\newcommand{\zeroThreeD}{\bm{0}}
+\newcommand{\egoHeight}{H}
+\newcommand{\egoHeightChange}{\Delta H}
+\newcommand{\uniDrive}{UniDrive\xspace}
+\newcommand{\uniDrivePlus}{UniDrive++\xspace}
+\newcommand{\sourceExt}{SourceExt\xspace}
+\newcommand{\newDepth}{\depthPred_{\egoHeightChange}}
+\newcommand{\oldDepth}{\depthPred_{0}}
+\newcommand{\depthGround}{{}^{g}\!\depthPred}
+\newcommand{\depthRegress}{{}^{r}\!\depthPred}
+\newcommand{\newDepthGround}{{}^{g}\!\newDepth}
+\newcommand{\oldDepthGround}{{}^{g}\!\oldDepth}
+\newcommand{\newDepthRegress}{{}^{r}\!\newDepth}
+\newcommand{\oldDepthRegress}{{}^{r}\!\oldDepth}
+\newcommand{\depthSlope}{m}
+\newcommand{\depthGTMax}{\depthGT_{max}}
+\newcommand{\depthGTMin}{\depthGT_{min}}
+\newcommand{\heightImage}{h}
+\newcommand{\pixUBottom}{\pixU_b}
+\newcommand{\pixVBottom}{\pixV_b}
+\newcommand{\pixUCenter}{\pixU_c}
+\newcommand{\pixVCenter}{\pixV_c}
+\newcommand{\heightBoxTwoD}{h_{2D}}
+\newcommand{\pixUCenterTwoD}{\pixU_{c,2D}}
+\newcommand{\pixVCenterTwoD}{\pixV_{c,2D}}
+\newcommand{\relu}{ReLU\xspace}
+\newcommand{\plucker}{Plucker\xspace}
+\newcommand{\ray}{\overrightarrow{r}}
+\newcommand{\trend}{trend\xspace}
+\newcommand{\trends}{trends\xspace}
 
 % More Notations
 \newcommand{\groundTruthj}{g_l}
@@ -579,7 +619,7 @@
 \newcommand{\gradTimeDice}{{}^d\gradTimeVanilla}
 \newcommand{\bigNumber}{M}
 
-% ALADIN Notations
+% ALADIN
 \newcommand{\fov}{FOV\xspace}
 \newcommand{\depthmap}{depthmap\xspace}
 \newcommand{\depthmaps}{depthmaps\xspace}
@@ -592,7 +632,6 @@
 \newcommand{\setOfLidarPts}{\setOfThreeDPts_\lidarSym}
 \newcommand{\pixel}{\mathbf{p}}
 \newcommand{\zeroVec}{\mathbf{0}}
-\newcommand{\ray}{\mathcal{R}}
 \newcommand{\rayDir}{\mathbf{r}}
 \newcommand{\intrinsic}{\mathbf{K}}
 \newcommand{\intrinsicRGB}{\intrinsic_R}
@@ -600,7 +639,7 @@
 \newcommand{\lidarRay}{\ray_\lidarSym}
 \newcommand{\trans}{t}
 \newcommand{\transVec}{\mathbf{t}}
-\newcommand{\extrinsic}{\mathbf{T}}
+\newcommand{\extrinsicTrans}{\mathbf{T}}
 \newcommand{\rotMat}{\mathbf{R}}
 \newcommand{\leftPixelSym}{p}
 \newcommand{\rightPixelSym}{q}
@@ -623,7 +662,7 @@
 \newcommand{\setOfOccPixels}{\mathcal{O}}
 \newcommand{\projection}{\pi}
 
-% Equivariance related
+% Equivariance
 \newcommand{\equivariant} {equivariant\xspace}
 \newcommand{\Equivariant} {Equivariant\xspace}
 \newcommand{\equivariance}{equivariance\xspace}
@@ -653,9 +692,9 @@
 \newcommand{\transformationMath}{\mathcal{T}}
 \newcommand{\transformationInput}{\transformationMath_\transformationGroupMember^\inputData}
 \newcommand{\transformationOutput}{\transformationMath_\transformationGroupMember^\outputData}
-\newcommand{\manifold}{manifold}
+\newcommand{\manifold}{manifold\xspace}
 
-% Projection Equivariance Stuff
+% Projection Equivariance
 \newcommand{\equivariantFunction}{\phi}
 \newcommand{\shiftFunction}{\psi}
 \newcommand{\transformation}{transformation\xspace}
@@ -664,6 +703,8 @@
 \newcommand{\varX}{X}
 \newcommand{\varY}{Y}
 \newcommand{\varZ}{Z}
+\newcommand{\depthOne}{m}
+\newcommand{\depthTwo}{n}
 \newcommand{\posX}{x}
 \newcommand{\posY}{y}
 \newcommand{\posZ}{z}
