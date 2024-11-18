@@ -21,9 +21,12 @@
 % \definecolor{sns_violet}{rgb}{0.34, 0.08, 0.49}
 % \definecolor{sns_orange}{rgb}{0.91, 0.33, 0.38}
 % colors_temp = sns.color_palette("magma", 20)
-% sns[3]  {0.21, 0.06, 0.42}
-% sns[6]  {0.45, 0.12, 0.51}
-% sns[10] {0.75, 0.22, 0.46}
+% sns[3]  {0.21, 0.06, 0.42} % (54,  115, 107)
+% sns[6]  {0.45, 0.12, 0.51} % (115,  31, 130)
+% sns[10] {0.75, 0.22, 0.46} % (191,  56, 117)
+% sns[13] {0.94, 0.38, 0.36}
+% sns[15] {0.99, 0.56, 0.39} % (255, 142, 100)
+% sns[17] {1.00, 0.73, 0.51} % (254, 187, 129)
 % sns[19] {0.99, 0.91, 0.66}
 \definecolor{sns_blue}{rgb}{0.21, 0.06, 0.42}    % (54,  115, 107)
 \definecolor{sns_violet}{rgb}{0.45, 0.12, 0.51}  % (115,  31, 130)
@@ -75,6 +78,9 @@
 \colorlet{theme_color}{sns_orange}%my_yellow
 \colorlet{theme_color_light}{sns_yellow!25}
 \colorlet{link_color}{Maroon}
+
+\colorlet{ood_color}{gray!20}
+\colorlet{methodColor}{cyan!20}
 
 % Scale qualitative figures by this fraction
 \newcommand{\figureScaleFraction}{0.9}
@@ -151,6 +157,7 @@
 \newcolumntype{m}{!{\vrule width 2.5\arrayrulewidth}}
 \newcolumntype{a}{>{\columncolor{theme_color_light}}l}
 \newcolumntype{b}{>{\columncolor{theme_color_light}}c}
+\newcolumntype{d}{>{\columncolor{ood_color}}c}
 
 \newcommand{\CYMyFix}{\cellcolor{theme_color_light}}
 \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
@@ -504,7 +511,7 @@
 \newcommand{\oldDepthGround}{{}^{g}\!\oldDepth}
 \newcommand{\newDepthRegress}{{}^{r}\!\newDepth}
 \newcommand{\oldDepthRegress}{{}^{r}\!\oldDepth}
-\newcommand{\depthSlope}{m}
+\newcommand{\depthSlope}{\beta}
 \newcommand{\depthGTMax}{\depthGT_{max}}
 \newcommand{\depthGTMin}{\depthGT_{min}}
 \newcommand{\heightImage}{h}
